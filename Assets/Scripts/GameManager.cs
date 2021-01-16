@@ -16,14 +16,22 @@ public class GameManager : MonoBehaviour
     public float populationPercentage;
     public float bossLifePercentage;
 
+    public GameObject characterDialogBox;
+    public bool characterDialogBoxShown;
+    private List<string> characterDialogues;
+
     // Start is called before the first frame update
     void Start()
     {
+        characterDialogues = new List<string>();
         baseResolution = Screen.currentResolution;
-        fadeOut = GameObject.Find("FadeIn").GetComponent<Animator>();
 
+        fadeOut = GameObject.Find("FadeIn").GetComponent<Animator>();
+        characterDialogBox = GameObject.Find("CharacterDialoguePanel");
         populationCircle = GameObject.Find("PopulationCircle");
         bossCircle = GameObject.Find("BossCircle");
+
+        Invoke(nameof(FirstDialoguesSequence), 3);
 
     }
 
@@ -33,6 +41,24 @@ public class GameManager : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "Game" || SceneManager.GetActiveScene().name == "TommyTestZone") { 
             FillBossCircle(bossLifePercentage);
             FillPopulationCircle(populationPercentage);
+        }
+
+        if (characterDialogBox != null)
+        {
+            if (characterDialogBoxShown == false)
+            {
+                characterDialogBox.GetComponent<RectTransform>().anchoredPosition = Vector3.Lerp(characterDialogBox.GetComponent<RectTransform>().anchoredPosition,
+                     new Vector3(0, 200, 0), 0.03f);
+
+                if (characterDialogues.Count != 0) {
+                    CharacterDialogue(characterDialogues[0]);
+                    characterDialogues.RemoveAt(0);
+                }
+            }
+            else {
+                characterDialogBox.GetComponent<RectTransform>().anchoredPosition = Vector3.Lerp(characterDialogBox.GetComponent<RectTransform>().anchoredPosition,
+                     new Vector3(0, -20, 0), 0.03f);
+            }
         }
     }
 
@@ -89,6 +115,30 @@ public class GameManager : MonoBehaviour
     private void GoMenu()
     {
         SceneManager.LoadScene("Title Screen");
+    }
+
+    private void CharacterDialogue(string message) 
+    {
+        if (characterDialogBox != null && characterDialogBoxShown == false) {
+            characterDialogBoxShown = true;
+            characterDialogBox.transform.Find("DialogueTxt").GetComponent<Text>().text = message;
+            Invoke(nameof(HideCharacterDialogue), 5f);
+        }
+    }
+
+    public void enqueueCharacterDialogue(string message) {
+        characterDialogues.Add(message);
+    }
+
+    public void HideCharacterDialogue()
+    {
+        characterDialogBoxShown = false;
+    }
+
+    public void FirstDialoguesSequence() {
+        enqueueCharacterDialogue("Oh no... I need to save the city !");
+        enqueueCharacterDialogue("I can walk with [W][A][S][D]\nI can jump with [Spacebar]");
+        enqueueCharacterDialogue("I can sprint with [Ctrl]\nAnd finally, I can send fireballs with [Left click button]");
     }
 
 }
