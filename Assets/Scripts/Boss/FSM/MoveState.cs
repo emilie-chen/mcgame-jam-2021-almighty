@@ -7,18 +7,15 @@ using UnityEngine;
 /// </summary>
 public class MoveState : INPCState
 {
-    Material testMat;
 
 #region FSMMethods
     public INPCState EnterState(BossController npc)
     {
-        testMat = npc.materials[1];
         return this;
     }
 
     public INPCState UpdateState(BossController npc)
     {
-        npc.GetComponent<Renderer>().material = testMat;
         return this;
     }
 
@@ -31,10 +28,17 @@ public class MoveState : INPCState
 
 #region StateSpecific
 
+    //Used to Move to set destination
     private void MoveToDest()
     {
 
     }
+
+    //Use to set destination
+    //private Vector3 SetDestination()
+    //{
+    //    return 
+    //}
 
 #endregion
 }

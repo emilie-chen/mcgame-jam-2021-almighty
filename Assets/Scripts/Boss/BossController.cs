@@ -1,17 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
+[RequireComponent(typeof(NavMeshAgent))]
 public class BossController : MonoBehaviour
 {
-    public Material[] materials; //USED FOR TESTING
-
     [SerializeField]
     private INPCState m_CurrentState;
 
     public MoveState    m_MoveState     = new MoveState();
     public IdleState    m_IdleState     = new IdleState();
     public AttackState  m_AttackState   = new AttackState();
+
+    public NavMeshAgent m_NaveMeshAgent;
 
     private void OnEnable()
     {

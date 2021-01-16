@@ -7,18 +7,15 @@ using UnityEngine;
 /// </summary>
 public class AttackState : INPCState
 {
-    Material testMat;
 
 #region FSM Methods
     public INPCState EnterState(BossController npc)
     {
-        testMat = npc.materials[2];
         return this;
     }
 
     public INPCState UpdateState(BossController npc)
     {
-        npc.GetComponent<Renderer>().material = testMat;
         return this;
     }
 
@@ -31,10 +28,17 @@ public class AttackState : INPCState
 
 #region State Specific
 
-    private bool AttackTarget<T>()
+    //Overall attack logic
+    private void AttackTarget(PlayerBehavior target)
     {
-        return true;
+        
     }
+
+    //Used for projectile targeting
+    //private Vector3 SetTarget()
+    //{
+    //
+    //}
 
 #endregion
 }
