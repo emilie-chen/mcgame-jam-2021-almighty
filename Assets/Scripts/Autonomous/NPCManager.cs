@@ -39,7 +39,7 @@ public class NPCManager : MonoBehaviour
         }
     }
 
-    void Start()
+    private void UpdateNpcIndices()
     {
         lock (this)
         {
@@ -51,7 +51,13 @@ public class NPCManager : MonoBehaviour
                 m_NpcSet.Add(npc);
             }
         }
+    }
+
+    void Start()
+    {
+        UpdateNpcIndices();
         Instance = this;
+        InvokeRepeating(nameof(UpdateNpcIndices), 1.0f, 1.0f);
     }
 
     void Update()

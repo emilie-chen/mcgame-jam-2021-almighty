@@ -33,8 +33,11 @@ public class NPC : MonoBehaviour
 
     private void ResetState()
     {
-        Target = NewTarget();
-        GetComponent<NavMeshAgent>().speed = 10.0f;
+        if (!IsInPanicMode)
+        {
+            Target = NewTarget();
+            GetComponent<NavMeshAgent>().speed = 10.0f;
+        }
     }
 
     private static Vector3 NewTarget()
