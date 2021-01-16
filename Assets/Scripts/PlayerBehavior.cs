@@ -64,12 +64,15 @@ public class PlayerBehavior : MonoBehaviour
 
     private void OnCollisionStay(Collision collision)
     {
-        if (collision.collider.gameObject.CompareTag("Terrain"))
+        // check normal
+        Vector3 normal = collision.contacts[0].normal;
+        if (Vector3.Angle(normal, Vector3.up) > 45.0f)
         {
-            if (Input.GetKey(KeyCode.Space))
-            {
-                GetComponent<Rigidbody>().AddForceAtPosition(Vector3.up * 3, transform.position, ForceMode.VelocityChange);
-            }
+            return;
+        }    
+        if (Input.GetKey(KeyCode.Space))
+        {
+            GetComponent<Rigidbody>().AddForceAtPosition(Vector3.up * 3, transform.position, ForceMode.VelocityChange);
         }
     }
 }

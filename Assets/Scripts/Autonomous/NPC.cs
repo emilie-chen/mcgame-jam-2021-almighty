@@ -13,6 +13,7 @@ public class NPC : MonoBehaviour
 
     void Update()
     {
+        Target = GameObject.FindWithTag("Player").transform.position;
         GetComponent<NavMeshAgent>().destination = Target;
     }
 }

@@ -4,11 +4,13 @@ using System.Collections.Generic;
 
 public class NPCManager : MonoBehaviour
 {
-    private GameObject[] m_NpcList;
+    private ISet<GameObject> m_NpcSet;
 
     void Start()
     {
-        m_NpcList = GameObject.FindGameObjectsWithTag("NPC");
+        GameObject[] npcs = GameObject.FindGameObjectsWithTag("NPC");
+        m_NpcSet = new HashSet<GameObject>();
+        //m_NpcSet.
     }
 
     void Update()
