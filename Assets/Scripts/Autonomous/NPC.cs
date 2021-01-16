@@ -9,11 +9,11 @@ public class NPC : MonoBehaviour
     void Start()
     {
         Target = transform.position;
+        GetComponent<DamagableEntity>().DeathHandler += Destroy;
     }
 
     void Update()
     {
-        Target = GameObject.FindWithTag("Player").transform.position;
         GetComponent<NavMeshAgent>().destination = Target;
     }
 }
