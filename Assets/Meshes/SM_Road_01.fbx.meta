@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 8a047c5e6cd58fd4789bcd01e7fd6a47
+=======
+guid: 0dc7214fd1445274889c56825b7e9112
+>>>>>>> artists
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []

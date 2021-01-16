@@ -16,6 +16,7 @@ EditorUserSettings:
 >>>>>>> rosalie
       flags: 0
     RecentlyUsedScenePath-2:
+<<<<<<< HEAD
       value: 22424703114646680e0b0227036c7e3922120b3e1f2b233e2867083debf42d
       flags: 0
     RecentlyUsedScenePath-3:
@@ -23,11 +24,20 @@ EditorUserSettings:
       flags: 0
     RecentlyUsedScenePath-4:
       value: 22424703114646680e0b0227036c6b19021b1d6a1f2b343528275326ece92021
+=======
+      value: 22424703114646680e0b0227036c6c111b07142f1f2b233e2867083debf42d
+>>>>>>> artists
       flags: 0
     RecentlyUsedScenePath-5:
       value: 22424703114646680e0b0227036c6b1f1b1a011e293b320a2227187df7ee3d2cfb
       flags: 0
     RecentlyUsedScenePath-3:
+<<<<<<< HEAD
+=======
+      value: 22424703114646680e0b0227036c6b19021b1d6a1f2b343528275326ece92021
+      flags: 0
+    RecentlyUsedScenePath-4:
+>>>>>>> artists
       value: 22424703114646680e0b0227036c73110f180d3e180d1504633c133af6f9
       flags: 0
     vcSharedLogLevel:

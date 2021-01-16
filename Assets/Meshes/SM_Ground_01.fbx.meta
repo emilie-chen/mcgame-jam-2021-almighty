@@ -1,11 +1,19 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: ace398b761bd3164284f8d8a92c38e12
+=======
+guid: a489bf16393d43540a919ee00cf6709d
+>>>>>>> artists
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
   externalObjects: {}
   materials:
+<<<<<<< HEAD
     materialImportMode: 2
+=======
+    materialImportMode: 0
+>>>>>>> artists
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -45,7 +53,11 @@ ModelImporter:
     importLights: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
+<<<<<<< HEAD
     generateSecondaryUV: 0
+=======
+    generateSecondaryUV: 1
+>>>>>>> artists
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
