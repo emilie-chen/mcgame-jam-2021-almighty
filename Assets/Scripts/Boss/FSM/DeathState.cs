@@ -6,7 +6,6 @@ public class DeathState : INPCState
 {
     public INPCState EnterState(BossController npc)
     {
-        Debug.Log("Victory");
         return this;
     }
 

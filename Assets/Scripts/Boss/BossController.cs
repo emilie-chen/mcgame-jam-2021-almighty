@@ -19,7 +19,7 @@ public class BossController : MonoBehaviour
     public AttackState  m_AttackState   = new AttackState();
     public DeathState   m_DeathState    = new DeathState();
 
-    public NavMeshAgent m_NaveMeshAgent;
+    public NavMeshAgent m_NavMeshAgent;
 
     [SerializeField]
     protected float m_hp = 100;
@@ -30,9 +30,12 @@ public class BossController : MonoBehaviour
     private float   m_ImmuneTime    = 0.5f;
     private bool    m_IsImmune      = false;
 
+    Transform  m_Target;
+
     private void OnEnable()
     {
-        m_CurrentState = m_IdleState.EnterState(npc: this);
+        m_Target = FindObjectOfType<PlayerBehavior>().transform; //This should be done the other way, with player registering itself
+        m_CurrentState = m_MoveState.EnterState(npc: this);
     }
 
     // Update is called once per frame
@@ -108,5 +111,10 @@ public class BossController : MonoBehaviour
             if (timer >= m_ImmuneTime)
                 m_IsImmune = false;
         }
+    }
+
+    public Transform GetPlayer()
+    {
+        return m_Target;
     }
 }
