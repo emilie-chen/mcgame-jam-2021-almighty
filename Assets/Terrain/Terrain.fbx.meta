@@ -1,15 +1,14 @@
 fileFormatVersion: 2
 guid: efb9c3884f70dcb4b963c8e60351faf3
 ModelImporter:
-  serializedVersion: 20101
+  serializedVersion: 20200
   internalIDToNameTable: []
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: DesertTexture
-    second: {fileID: 2378354209066886228, guid: 3320fcba568a0d84b998cda2233bd311,
-      type: 3}
+    second: {fileID: 2378354209066886228, guid: 3320fcba568a0d84b998cda2233bd311, type: 3}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -101,6 +100,7 @@ ModelImporter:
   animationType: 2
   humanoidOversampling: 1
   avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
   additionalBone: 0
   userData: 
   assetBundleName: 

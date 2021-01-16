@@ -87,6 +87,9 @@ public class TitlescreenManager : MonoBehaviour
             case "ExitButton":
                 ExitGame();
                 break;
+            case "GoToMenu":
+                GoToMenu();
+                break;
         }
     }
 
@@ -95,6 +98,15 @@ public class TitlescreenManager : MonoBehaviour
         {
             fadeOut.GetComponent<Animator>().SetTrigger("FadeOut");
             SceneManager.LoadScene("Game");
+        }
+    }
+
+    void GoToMenu()
+    {
+        if (SceneManager.GetActiveScene().name == "End Screen")
+        {
+            fadeOut.GetComponent<Animator>().SetTrigger("FadeOut");
+            SceneManager.LoadScene("Title Screen");
         }
     }
 

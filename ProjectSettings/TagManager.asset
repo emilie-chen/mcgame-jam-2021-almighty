@@ -5,6 +5,16 @@ TagManager:
   serializedVersion: 2
   tags:
   - Terrain
+  - Building
+  - NPC
+  - OptionsButton
+  - ClosePannelButton
+  - FullscreenButton
+  - CreditsButton
+  - GameManager
+  - ExitButton
+  - NewGameButton
+  - GoToMenu
   layers:
   - Default
   - TransparentFX
