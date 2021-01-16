@@ -15,7 +15,6 @@ public class PopPanelTS : MonoBehaviour
     public Color colorInactive;
     public Color colorActive;
     public PlaySounds soundModule;
-    
 
     // Start is called before the first frame update
     void Start()
@@ -113,6 +112,12 @@ public class PopPanelTS : MonoBehaviour
             case "FullscreenButton":
                 ToggleFullScreen(childOptions[childSelected].gameObject);
                 break;
+            case "MasterVolume":              
+                break;
+            case "SoundEffects":
+                break;
+            case "MusicButton":
+                break;
             case "NewGameButton":
                 GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().LoadHub();
                 break;
@@ -122,9 +127,27 @@ public class PopPanelTS : MonoBehaviour
         }
     }
 
+
     private void ToggleFullScreen(GameObject panneau)
     {
         GameManager.ToggleFullscreen(!Screen.fullScreen);
         GameObject.Find("CheckboxFullscreen").GetComponent<Image>().enabled = Screen.fullScreen;
+    }
+
+    public void ChangeChild(int childSelected)
+    {
+        if (activated && tsManager.canButtonDown) { 
+            this.childSelected = childSelected;
+            UpdateChildButtons();
+        }
+    }
+
+    public void ExecuteButtonByClick() {
+        if (activated && tsManager.canButtonDown)
+        {
+            tsManager.canButtonDown = false;
+            soundModule.playSound(0);
+            ExecuteButton(childSelected);
+        }
     }
 }

@@ -63,7 +63,6 @@ public class TitlescreenManager : MonoBehaviour
     void UpdateButtons(){
         int i = 0;
         foreach (Text txt in boutonMenus) {
-
             if (i == buttonPosition) {
                 txt.color = colorActive; 
             } else {
@@ -95,7 +94,7 @@ public class TitlescreenManager : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "Title Screen")
         {
             fadeOut.GetComponent<Animator>().SetTrigger("FadeOut");
-            // LOAD GAME
+            SceneManager.LoadScene("Game");
         }
     }
 
@@ -114,6 +113,23 @@ public class TitlescreenManager : MonoBehaviour
     {
         GameObject.FindGameObjectWithTag("ExitButton").transform.GetChild(0).gameObject.GetComponent<PopPanelTS>().Activate();
         popUpOpen = true;
+    }
+
+    public void ChangeChild(int childSelected)
+    {
+        if (!popUpOpen) { 
+            this.buttonPosition = childSelected;
+            UpdateButtons();
+        }
+    }
+
+    public void ExecuteButtonByClick()
+    {
+        if (!popUpOpen && canButtonDown) { 
+            canButtonDown = false;
+            ExecuteButton(buttonPosition);
+            soundModule.playSound(0);
+        }
     }
 
 }

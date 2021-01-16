@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public static Animator fadeOut;
     public GameObject instance;
 
+
     // Start is called before the first frame update
     void Start()
     {
