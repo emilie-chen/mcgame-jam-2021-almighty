@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 /// <summary>
 /// Manage Boss movement behaviour
@@ -26,8 +27,7 @@ public class MoveState : INPCState
 #region FSMMethods
     public INPCState EnterState(BossController npc)
     {
-        if (m_Destination == null)
-            SetDestination(npc.GetPlayer().gameObject.transform);
+        SetDest(npc.GetPlayer().gameObject.transform);
 
         npc.m_NavMeshAgent.speed = m_MoveSpeed;
         return this;
@@ -38,20 +38,26 @@ public class MoveState : INPCState
         Vector3 offset = npc.transform.position - m_Destination.position;
         float sqrLen = offset.sqrMagnitude;
 
-        if (sqrLen < GetSqrDist(m_MaxRadius) && sqrLen > GetSqrDist(m_MinRadius))
-            npc.m_NavMeshAgent.isStopped = true;
-        else
-            npc.m_NavMeshAgent.isStopped = false;
+        if (StayInRange(npc) != Vector3.zero)
+            npc.m_NavMeshAgent.SetDestination(StayInRange(npc));
 
-        npc.m_NavMeshAgent.SetDestination(StayInRange(npc));
+        if (Avoidance(npc) != Vector3.zero)
+            npc.m_NavMeshAgent.SetDestination(Avoidance(npc));
 
-        npc.m_NavMeshAgent.SetDestination(Avoidance(npc));
+        NavMeshPath path = new NavMeshPath();
+        npc.m_NavMeshAgent.CalculatePath(m_Destination.position, path);
+        if (path.status == NavMeshPathStatus.PathPartial)
+        {
+            npc.m_NavMeshAgent.SetDestination(m_Destination.position);
+        }
+
+        //SAFEGUARD
+        if (sqrLen > 10000)
+            npc.m_NavMeshAgent.Warp(RandomPos());
 
         if (IsLineOfSight(npc) && sqrLen < GetSqrDist(m_MaxRadius) && offset.sqrMagnitude > GetSqrDist(m_MinRadius))
             return ExitState(npc.m_AttackState, npc);
-
-
-
+        
         return this;
     }
 
@@ -65,7 +71,7 @@ public class MoveState : INPCState
 #region StateSpecific
 
     //Use to set destination
-    private Transform SetDestination(Transform newDest)
+    private Transform SetDest(Transform newDest)
     {
         m_Destination = newDest;
         return m_Destination;
@@ -109,6 +115,14 @@ public class MoveState : INPCState
         }
 
         return avoidance;
+    }
+
+    Vector3 RandomPos()
+    {
+        Vector3 dest = new Vector3();
+        dest.x = Random.Range(0, 100);
+        dest.z = Random.Range(0, 100);
+        return dest;
     }
 
     #endregion
