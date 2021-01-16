@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8646577987700308946}
   - component: {fileID: 8646577987700308950}
   - component: {fileID: 9080285170790459018}
+  - component: {fileID: -617514302832141426}
   m_Layer: 0
   m_Name: BossPrefab
   m_TagString: Untagged
@@ -110,6 +111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_NaveMeshAgent: {fileID: 9080285170790459018}
+  m_hp: 0
 --- !u!195 &9080285170790459018
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -132,3 +134,16 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!65 &-617514302832141426
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8646577987700308945}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
