@@ -30,8 +30,8 @@ public class DamagableEntity : MonoBehaviour
 
         Vector3 kbDir = collision.contacts[0].normal;
 
-        Rigidbody rb = GetComponent<Rigidbody>();
-        rb.AddForce(kbDir * knockback, ForceMode.Force);
+        TryGetComponent<Rigidbody>(out Rigidbody rb);
+        rb?.AddForce(kbDir * knockback, ForceMode.Force);
 
 
         CheckHealth();
