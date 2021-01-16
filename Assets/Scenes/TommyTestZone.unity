@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 85cf0b004bc4a654b9e501efcce47902, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -1212,6 +1212,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1122945464202960128, guid: 291c77d07c0039a4794fd30d6c5291d1, type: 3}
+      propertyPath: redSkyColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1122945464202960128, guid: 291c77d07c0039a4794fd30d6c5291d1, type: 3}
+      propertyPath: redSkyColor.r
+      value: 0.20784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 1122945464202960128, guid: 291c77d07c0039a4794fd30d6c5291d1, type: 3}
+      propertyPath: baseSkyColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1122945464202960128, guid: 291c77d07c0039a4794fd30d6c5291d1, type: 3}
+      propertyPath: baseSkyColor.b
+      value: 0.5019608
+      objectReference: {fileID: 0}
+    - target: {fileID: 1122945464202960128, guid: 291c77d07c0039a4794fd30d6c5291d1, type: 3}
+      propertyPath: baseSkyColor.g
+      value: 0.5019608
+      objectReference: {fileID: 0}
+    - target: {fileID: 1122945464202960128, guid: 291c77d07c0039a4794fd30d6c5291d1, type: 3}
+      propertyPath: baseSkyColor.r
+      value: 0.5019608
+      objectReference: {fileID: 0}
+    - target: {fileID: 1122945464202960128, guid: 291c77d07c0039a4794fd30d6c5291d1, type: 3}
+      propertyPath: darkerSkyColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1122945464202960128, guid: 291c77d07c0039a4794fd30d6c5291d1, type: 3}
+      propertyPath: darkerSkyColor.b
+      value: 0.21902815
+      objectReference: {fileID: 0}
+    - target: {fileID: 1122945464202960128, guid: 291c77d07c0039a4794fd30d6c5291d1, type: 3}
+      propertyPath: darkerSkyColor.g
+      value: 0.21902815
+      objectReference: {fileID: 0}
+    - target: {fileID: 1122945464202960128, guid: 291c77d07c0039a4794fd30d6c5291d1, type: 3}
+      propertyPath: darkerSkyColor.r
+      value: 0.4339623
+      objectReference: {fileID: 0}
     - target: {fileID: 1122945464202960130, guid: 291c77d07c0039a4794fd30d6c5291d1, type: 3}
       propertyPath: m_Camera
       value: 
