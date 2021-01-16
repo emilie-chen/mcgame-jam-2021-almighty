@@ -1,15 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
-public class NewMonoBehaviour : MonoBehaviour
+public class NPCManager : MonoBehaviour
 {
-    // Use this for initialization
+    private GameObject[] m_NpcList;
+
     void Start()
     {
-
+        m_NpcList = GameObject.FindGameObjectsWithTag("NPC");
     }
 
-    // Update is called once per frame
     void Update()
     {
 
