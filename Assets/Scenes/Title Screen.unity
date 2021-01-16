@@ -1389,7 +1389,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 070807cdf995fea429de6fd7c7e7f688, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  instance: {fileID: 0}
+  populationCircle: {fileID: 0}
+  bossCircle: {fileID: 0}
 --- !u!1 &8198427147455622579
 GameObject:
   m_ObjectHideFlags: 0

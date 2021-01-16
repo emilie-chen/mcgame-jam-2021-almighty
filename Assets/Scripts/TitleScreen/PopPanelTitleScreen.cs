@@ -118,9 +118,6 @@ public class PopPanelTitleScreen : MonoBehaviour
                 break;
             case "MusicButton":
                 break;
-            case "NewGameButton":
-                GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().LoadHub();
-                break;
             case "ExitButton":
                 Application.Quit();
                 break;
