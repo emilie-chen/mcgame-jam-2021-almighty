@@ -12,6 +12,7 @@ public class BossController : MonoBehaviour
     public MoveState    m_MoveState     = new MoveState();
     public IdleState    m_IdleState     = new IdleState();
     public AttackState  m_AttackState   = new AttackState();
+    public DeathState   m_DeathState    = new DeathState();
 
     public NavMeshAgent m_NaveMeshAgent;
 
@@ -36,5 +37,10 @@ public class BossController : MonoBehaviour
     private void Sethp(float newhp)
     {
         m_hp = newhp;
+    }
+
+    private void OnNoMorehp()
+    {
+        m_CurrentState.ExitState(m_DeathState, this);
     }
 }

@@ -2,17 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DeathState : MonoBehaviour
+public class DeathState : INPCState
 {
-    // Start is called before the first frame update
-    void Start()
+    public INPCState EnterState(BossController npc)
     {
-        
+        return this;
     }
 
-    // Update is called once per frame
-    void Update()
+    public INPCState UpdateState(BossController npc)
     {
-        
+        return this;
+    }
+
+    public INPCState ExitState(INPCState newState, BossController npc)
+    {
+        return newState.EnterState(npc);
     }
 }
