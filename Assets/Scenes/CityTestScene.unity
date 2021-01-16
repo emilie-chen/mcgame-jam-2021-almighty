@@ -453,6 +453,7 @@ GameObject:
   - component: {fileID: 95490311}
   - component: {fileID: 95490310}
   - component: {fileID: 95490316}
+  - component: {fileID: 95490317}
   m_Layer: 0
   m_Name: DummyNPC
   m_TagString: NPC
@@ -485,9 +486,9 @@ NavMeshAgent:
   m_GameObject: {fileID: 95490309}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 30.27
-  m_Acceleration: 50.34
+  m_Radius: 1.77
+  m_Speed: 28.65
+  m_Acceleration: 41.3
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -587,6 +588,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {x: 0, y: 0, z: 0}
+--- !u!114 &95490317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95490309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21b869edbde7545e494cc16257a22f25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 10
+  Health: 10
 --- !u!1 &134119865
 GameObject:
   m_ObjectHideFlags: 0
@@ -1930,6 +1945,7 @@ GameObject:
   - component: {fileID: 1384610981}
   - component: {fileID: 1384610980}
   - component: {fileID: 1384610979}
+  - component: {fileID: 1384610986}
   m_Layer: 0
   m_Name: DummyPlayer
   m_TagString: Player
@@ -1949,8 +1965,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 910d451071f4f46249879f31a98318f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 100
-  Health: 100
 --- !u!65 &1384610980
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2057,6 +2071,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1384610986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1384610978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21b869edbde7545e494cc16257a22f25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 100
+  Health: 100
 --- !u!1 &1403333347
 GameObject:
   m_ObjectHideFlags: 0

@@ -17,7 +17,7 @@ public class NPCManager : MonoBehaviour
 
     public void NotifyCrashSite(Vector3 hitPosition)
     {
-        Debug.Log(hitPosition);
+        //Debug.Log(hitPosition);
         IEnumerable<(NPC, Vector3)> npcsInRange;
         lock (this)
         {
@@ -26,19 +26,20 @@ public class NPCManager : MonoBehaviour
                from npc in m_NpcSet
                where Vector3.Distance(npc.transform.position, hitPosition) <= NPC_RUNAWAY_RANGE
                select (npc.GetComponent<NPC>(), npc.transform.position);
+            Debug.Log(npcsInRange.Count());
         }
         foreach ((NPC npc, Vector3 npcPos) in npcsInRange)
         {
             Vector3 dirToRun = (npcPos - hitPosition).normalized;
-            Debug.Log(dirToRun);
-            Debug.DrawRay(npc.transform.position, dirToRun, Color.green, 10.0f);
+            Debug.DrawRay(npc.transform.position, dirToRun * NPC_RUN_DIST, Color.green, 10.0f);
             Vector3 target = npcPos + dirToRun * NPC_RUN_DIST;
             target.y = STANDARD_NPC_HEIGHT;
-            npc.Target = target;
+            npc.Runaway(target);
+            Debug.Log(npc.Target);
         }
     }
 
-    void Start()
+    private void UpdateNpcIndices()
     {
         lock (this)
         {
@@ -46,10 +47,17 @@ public class NPCManager : MonoBehaviour
             m_NpcSet = new HashSet<GameObject>();
             foreach (GameObject npc in npcs)
             {
+                npc.GetComponent<DamagableEntity>().DeathHandler += npc => m_NpcSet.Remove(npc);
                 m_NpcSet.Add(npc);
             }
         }
+    }
+
+    void Start()
+    {
+        UpdateNpcIndices();
         Instance = this;
+        InvokeRepeating(nameof(UpdateNpcIndices), 1.0f, 1.0f);
     }
 
     void Update()
