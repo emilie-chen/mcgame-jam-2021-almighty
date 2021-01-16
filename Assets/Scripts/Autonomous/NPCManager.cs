@@ -34,12 +34,12 @@ public class NPCManager : MonoBehaviour
             Debug.DrawRay(npc.transform.position, dirToRun * NPC_RUN_DIST, Color.green, 10.0f);
             Vector3 target = npcPos + dirToRun * NPC_RUN_DIST;
             target.y = STANDARD_NPC_HEIGHT;
-            npc.Target = target;
+            npc.Runaway(target);
             Debug.Log(npc.Target);
         }
     }
 
-    void Start()
+    private void UpdateNpcIndices()
     {
         lock (this)
         {
@@ -51,7 +51,13 @@ public class NPCManager : MonoBehaviour
                 m_NpcSet.Add(npc);
             }
         }
+    }
+
+    void Start()
+    {
+        UpdateNpcIndices();
         Instance = this;
+        InvokeRepeating(nameof(UpdateNpcIndices), 1.0f, 1.0f);
     }
 
     void Update()
