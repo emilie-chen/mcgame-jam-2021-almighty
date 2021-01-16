@@ -63,7 +63,6 @@ public class TitlescreenManager : MonoBehaviour
     void UpdateButtons(){
         int i = 0;
         foreach (Text txt in boutonMenus) {
-
             if (i == buttonPosition) {
                 txt.color = colorActive; 
             } else {
@@ -95,25 +94,42 @@ public class TitlescreenManager : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "Title Screen")
         {
             fadeOut.GetComponent<Animator>().SetTrigger("FadeOut");
-            // LOAD GAME
+            SceneManager.LoadScene("Game");
         }
     }
 
     void Settings() {
-        GameObject.FindGameObjectWithTag("OptionsButton").transform.GetChild(0).gameObject.GetComponent<PopPanelTS>().Activate();
+        GameObject.FindGameObjectWithTag("OptionsButton").transform.GetChild(0).gameObject.GetComponent<PopPanelTitleScreen>().Activate();
         popUpOpen = true;
     }
 
     void Credits()
     {
-        GameObject.FindGameObjectWithTag("CreditsButton").transform.GetChild(0).gameObject.GetComponent<PopPanelTS>().Activate();
+        GameObject.FindGameObjectWithTag("CreditsButton").transform.GetChild(0).gameObject.GetComponent<PopPanelTitleScreen>().Activate();
         popUpOpen = true;
     }
 
     void ExitGame()
     {
-        GameObject.FindGameObjectWithTag("ExitButton").transform.GetChild(0).gameObject.GetComponent<PopPanelTS>().Activate();
+        GameObject.FindGameObjectWithTag("ExitButton").transform.GetChild(0).gameObject.GetComponent<PopPanelTitleScreen>().Activate();
         popUpOpen = true;
+    }
+
+    public void ChangeChild(int childSelected)
+    {
+        if (!popUpOpen) { 
+            this.buttonPosition = childSelected;
+            UpdateButtons();
+        }
+    }
+
+    public void ExecuteButtonByClick()
+    {
+        if (!popUpOpen && canButtonDown) { 
+            canButtonDown = false;
+            ExecuteButton(buttonPosition);
+            soundModule.playSound(0);
+        }
     }
 
 }
