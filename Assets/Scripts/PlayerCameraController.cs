@@ -20,9 +20,14 @@ public class PlayerCameraController : MonoBehaviour
     private bool m_DoFovAnimation;
     public Shader DepthShader;
     private static readonly float MAIN_CAM_DELTA_TIME = 1.0f / 60.0f;
+    // Edit Tommy
+    private Animator animator;
+    public enum handsAnimationState {Idle, Flying, Walking};
+    public handsAnimationState handsAnimation;
 
     void Start()
     {
+        animator = transform.Find("Arms").gameObject.GetComponent<Animator>();
         m_Camera = GetComponent<Camera>();
         InvokeRepeating(nameof(UpdateCamera), 0.0f, MAIN_CAM_DELTA_TIME);
     }
@@ -41,6 +46,8 @@ public class PlayerCameraController : MonoBehaviour
         {
             m_MouseLocked = true;
             Cursor.lockState = CursorLockMode.Locked;
+
+            animator.SetTrigger("cast1");
         }
 
         Vector4 input = GetUserInput();
@@ -112,6 +119,24 @@ public class PlayerCameraController : MonoBehaviour
 
         if (m_MouseLocked)
         {
+
+            if (input.z != 0 || input.x != 0) 
+            {
+                handsAnimation = handsAnimationState.Walking;
+            } 
+            else
+            {
+                handsAnimation = handsAnimationState.Idle;
+            }
+
+            // To implement if you want to see a different flying animation =)       
+            bool isOnGround = false;
+            // ---------------------
+            if ((input.z != 0 || input.x != 0) && isOnGround) {
+                handsAnimation = handsAnimationState.Flying;
+            }
+           
+
             Rigidbody parentRb = transform.parent.GetComponent<Rigidbody>();
             // reset horizontal (xz) speed to 0
             Vector3 originalVel = parentRb.velocity;
@@ -126,8 +151,31 @@ public class PlayerCameraController : MonoBehaviour
             //transform.parent.Translate(Vector3.ProjectOnPlane(transform.parent.transform.right, Vector3.up).normalized * input.x, Space.World);
             parentRb.velocity += Vector3.ProjectOnPlane(transform.parent.transform.right, Vector3.up).normalized * input.x * 30;
         }
+
+        UpdateAnimatorStates();
+         
         transform.parent.transform.rotation = Quaternion.Euler(transform.parent.transform.rotation.eulerAngles.x,
             transform.parent.transform.rotation.eulerAngles.y, 0.0f);
+    }
+
+    private void UpdateAnimatorStates() {
+        switch (handsAnimation) {
+            case handsAnimationState.Idle:
+                animator.SetBool("idle",true);
+                animator.SetBool("walking", false);
+                animator.SetBool("flying", false);
+                break;
+            case handsAnimationState.Walking:
+                animator.SetBool("walking", true);
+                animator.SetBool("idle", false);
+                animator.SetBool("flying", false);
+                break;
+            case handsAnimationState.Flying:
+                animator.SetBool("flying", true);
+                animator.SetBool("idle", false);
+                animator.SetBool("walking", false);
+                break;
+        }
     }
 
     private Vector4 GetUserInput()
