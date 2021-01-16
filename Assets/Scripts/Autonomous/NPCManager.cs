@@ -34,7 +34,7 @@ public class NPCManager : MonoBehaviour
             Debug.DrawRay(npc.transform.position, dirToRun * NPC_RUN_DIST, Color.green, 10.0f);
             Vector3 target = npcPos + dirToRun * NPC_RUN_DIST;
             target.y = STANDARD_NPC_HEIGHT;
-            npc.Target = target;
+            npc.Runaway(target);
             Debug.Log(npc.Target);
         }
     }

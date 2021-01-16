@@ -130,9 +130,9 @@ public class PlayerCameraController : MonoBehaviour
             }
 
             // To implement if you want to see a different flying animation =)       
-            bool isOnGround = false;
+            bool isNotOnGround = false;
             // ---------------------
-            if ((input.z != 0 || input.x != 0) && isOnGround) {
+            if ((input.z != 0 || input.x != 0) && isNotOnGround) {
                 handsAnimation = handsAnimationState.Flying;
             }
            
