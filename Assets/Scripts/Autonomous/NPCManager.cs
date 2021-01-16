@@ -8,6 +8,7 @@ public class NPCManager : MonoBehaviour
     private ISet<GameObject> m_NpcSet;
     public const float NPC_RUNAWAY_RANGE = 20.0f;
     public const float NPC_RUN_DIST = 60.0f;
+    public const float STANDARD_NPC_HEIGHT = 30.0f;
 
     public static NPCManager Instance
     {
@@ -32,7 +33,7 @@ public class NPCManager : MonoBehaviour
             Debug.Log(dirToRun);
             Debug.DrawRay(npc.transform.position, dirToRun, Color.green, 10.0f);
             Vector3 target = npcPos + dirToRun * NPC_RUN_DIST;
-            target.y = npc.transform.position.y;
+            target.y = STANDARD_NPC_HEIGHT;
             npc.Target = target;
         }
     }
