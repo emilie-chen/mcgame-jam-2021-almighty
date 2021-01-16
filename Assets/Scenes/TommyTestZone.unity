@@ -216,6 +216,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &642726213
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 642726214}
+  m_Layer: 0
+  m_Name: Spawn Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &642726214
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642726213}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.001, y: -0.027, z: -0.079}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5431832966304919100}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &695175983
 GameObject:
   m_ObjectHideFlags: 0
@@ -1490,6 +1520,7 @@ Transform:
   - {fileID: 9148163072325940696}
   - {fileID: 8978074001339039087}
   - {fileID: 1069694974577674976}
+  - {fileID: 642726214}
   m_Father: {fileID: 3983427243431902872}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2376,6 +2407,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8188541407587555769}
   - component: {fileID: 8856429453352698628}
+  - component: {fileID: 8856429453352698629}
   m_Layer: 0
   m_Name: Arms
   m_TagString: Untagged
@@ -2402,6 +2434,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8856429453352698629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8856429453352698627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20e5f89eb09825b4c84fd80248ae9886, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoint: {fileID: 642726213}
+  fireball: {fileID: 3084069784578098208, guid: 07da4f5189136cc4086418d607d3d22e, type: 3}
+  smoke: {fileID: 7386210840323685228, guid: 0fd8f4aa98bccfc4d9633970675988de, type: 3}
 --- !u!4 &8910762047136224765
 Transform:
   m_ObjectHideFlags: 0
