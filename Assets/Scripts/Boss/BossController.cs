@@ -15,6 +15,8 @@ public class BossController : MonoBehaviour
 
     public NavMeshAgent m_NaveMeshAgent;
 
+    protected float m_hp;
+
     private void OnEnable()
     {
         m_CurrentState = m_IdleState.EnterState(this);
@@ -24,5 +26,15 @@ public class BossController : MonoBehaviour
     void Update()
     {
         m_CurrentState = m_CurrentState.UpdateState(this);
+    }
+
+    public float Gethp()
+    {
+        return m_hp;
+    }
+
+    private void Sethp(float newhp)
+    {
+        m_hp = newhp;
     }
 }
