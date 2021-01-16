@@ -4,10 +4,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PopPanelTS : MonoBehaviour
+public class PopPanelTitleScreen : MonoBehaviour
 {
 
-    TitlescreenManager tsManager;
+    TitlescreenManager titleScreenManager;
     public GameObject childPannel;
     public Text[] childOptions;
     public int childSelected;
@@ -20,10 +20,10 @@ public class PopPanelTS : MonoBehaviour
     void Start()
     {
         childPannel = transform.GetChild(0).gameObject;
-        this.tsManager = GameObject.Find("Canvas").GetComponent<TitlescreenManager>();
+        this.titleScreenManager = GameObject.Find("Canvas").GetComponent<TitlescreenManager>();
         this.soundModule = GameObject.Find("Canvas").GetComponent<PlaySounds>();
-        colorInactive = tsManager.colorInactive;
-        colorActive = tsManager.colorActive;
+        colorInactive = titleScreenManager.colorInactive;
+        colorActive = titleScreenManager.colorActive;
         UpdateChildButtons();
         Desactivate();
     }
@@ -48,12 +48,12 @@ public class PopPanelTS : MonoBehaviour
                 Desactivate();
             }
 
-            if (tsManager.canButtonDown)
+            if (titleScreenManager.canButtonDown)
                 {
 
                  if (movement != 0)
                     {
-                    tsManager.canButtonDown = false;
+                    titleScreenManager.canButtonDown = false;
                     childSelected -= Mathf.RoundToInt(movement);
                     if (childSelected >= 0 && childSelected < childOptions.Length)
                     {
@@ -64,7 +64,7 @@ public class PopPanelTS : MonoBehaviour
                 }
                 if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space))
                     {
-                        tsManager.canButtonDown = false;
+                        titleScreenManager.canButtonDown = false;
                         soundModule.playSound(0);
                         ExecuteButton(childSelected);
                     }
@@ -73,14 +73,14 @@ public class PopPanelTS : MonoBehaviour
     }
 
     public void Activate() {
-        this.tsManager.popUpOpen = true;
+        this.titleScreenManager.popUpOpen = true;
         activated = true;
         GetComponent<Image>().enabled = true;
         childPannel.SetActive(true);
     }
 
     public void Desactivate() {
-        this.tsManager.popUpOpen = false;
+        this.titleScreenManager.popUpOpen = false;
         activated = false;
         GetComponent<Image>().enabled = false;
         childPannel.SetActive(false);
@@ -136,16 +136,16 @@ public class PopPanelTS : MonoBehaviour
 
     public void ChangeChild(int childSelected)
     {
-        if (activated && tsManager.canButtonDown) { 
+        if (activated && titleScreenManager.canButtonDown) { 
             this.childSelected = childSelected;
             UpdateChildButtons();
         }
     }
 
     public void ExecuteButtonByClick() {
-        if (activated && tsManager.canButtonDown)
+        if (activated && titleScreenManager.canButtonDown)
         {
-            tsManager.canButtonDown = false;
+            titleScreenManager.canButtonDown = false;
             soundModule.playSound(0);
             ExecuteButton(childSelected);
         }

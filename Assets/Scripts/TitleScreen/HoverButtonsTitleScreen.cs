@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class HoverButtonsTS : MonoBehaviour, 
+public class HoverButtonsTitleScreen : MonoBehaviour, 
      IPointerClickHandler,
      IPointerEnterHandler
     {
 
-    public TitlescreenManager tsManager;
-    public PopPanelTS tsPanel;
+    public TitlescreenManager titleScreenManager;
+    public PopPanelTitleScreen titleScreenPanel;
     public int position;
 
     // Start is called before the first frame update
@@ -23,21 +23,21 @@ public class HoverButtonsTS : MonoBehaviour,
     }
 
     void IPointerEnterHandler.OnPointerEnter(PointerEventData eventData){
-        if (tsManager != null) {
-            tsManager.ChangeChild(position);
-        } else if (tsPanel != null) {
-            tsPanel.ChangeChild(position);
+        if (titleScreenManager != null) {
+            titleScreenManager.ChangeChild(position);
+        } else if (titleScreenPanel != null) {
+            titleScreenPanel.ChangeChild(position);
         }
     }
 
     public void OnPointerClick(PointerEventData eventData){
-        if (tsManager != null)
+        if (titleScreenManager != null)
         {
-            tsManager.ExecuteButtonByClick();
+            titleScreenManager.ExecuteButtonByClick();
         }
-        else if (tsPanel != null)
+        else if (titleScreenPanel != null)
         {
-            tsPanel.ExecuteButtonByClick();
+            titleScreenPanel.ExecuteButtonByClick();
         }
     }
 }

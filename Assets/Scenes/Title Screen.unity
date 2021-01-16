@@ -538,8 +538,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac6a2bf7bb2562f458ce9e73aee4f405, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tsManager: {fileID: 8198427147588228195}
-  tsPanel: {fileID: 0}
+  titleScreenManager: {fileID: 8198427147588228195}
+  titleScreenPanel: {fileID: 0}
   position: 1
 --- !u!61 &8198427146694823254
 BoxCollider2D:
@@ -885,8 +885,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac6a2bf7bb2562f458ce9e73aee4f405, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tsManager: {fileID: 0}
-  tsPanel: {fileID: 8198427148348876563}
+  titleScreenManager: {fileID: 0}
+  titleScreenPanel: {fileID: 8198427148348876563}
   position: 1
 --- !u!61 &8198427146936261600
 BoxCollider2D:
@@ -1089,8 +1089,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac6a2bf7bb2562f458ce9e73aee4f405, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tsManager: {fileID: 0}
-  tsPanel: {fileID: 8198427148348876563}
+  titleScreenManager: {fileID: 0}
+  titleScreenPanel: {fileID: 8198427148348876563}
   position: 0
 --- !u!61 &8198427147321204453
 BoxCollider2D:
@@ -1212,8 +1212,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac6a2bf7bb2562f458ce9e73aee4f405, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tsManager: {fileID: 8198427147588228195}
-  tsPanel: {fileID: 0}
+  titleScreenManager: {fileID: 8198427147588228195}
+  titleScreenPanel: {fileID: 0}
   position: 2
 --- !u!61 &8198427147424212894
 BoxCollider2D:
@@ -1334,8 +1334,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac6a2bf7bb2562f458ce9e73aee4f405, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tsManager: {fileID: 0}
-  tsPanel: {fileID: 8198427148655779371}
+  titleScreenManager: {fileID: 0}
+  titleScreenPanel: {fileID: 8198427148655779371}
   position: 0
 --- !u!61 &8198427147435043998
 BoxCollider2D:
@@ -2060,8 +2060,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac6a2bf7bb2562f458ce9e73aee4f405, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tsManager: {fileID: 8198427147588228195}
-  tsPanel: {fileID: 0}
+  titleScreenManager: {fileID: 8198427147588228195}
+  titleScreenPanel: {fileID: 0}
   position: 3
 --- !u!61 &8198427148062283435
 BoxCollider2D:
@@ -2341,8 +2341,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac6a2bf7bb2562f458ce9e73aee4f405, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tsManager: {fileID: 8198427147588228195}
-  tsPanel: {fileID: 0}
+  titleScreenManager: {fileID: 8198427147588228195}
+  titleScreenPanel: {fileID: 0}
   position: 0
 --- !u!61 &8198427148305949793
 BoxCollider2D:
@@ -2391,9 +2391,6 @@ MonoBehaviour:
   colorInactive: {r: 0, g: 0, b: 0, a: 0}
   colorActive: {r: 0, g: 0, b: 0, a: 0}
   soundModule: {fileID: 0}
-  masterVolumePanel: {fileID: 0}
-  soundEffectPanel: {fileID: 0}
-  musicPanel: {fileID: 0}
 --- !u!222 &8198427148348876564
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2564,8 +2561,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac6a2bf7bb2562f458ce9e73aee4f405, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tsManager: {fileID: 0}
-  tsPanel: {fileID: 8198427148529366753}
+  titleScreenManager: {fileID: 0}
+  titleScreenPanel: {fileID: 8198427148529366753}
   position: 1
 --- !u!61 &8198427148389418007
 BoxCollider2D:
@@ -2838,8 +2835,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac6a2bf7bb2562f458ce9e73aee4f405, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tsManager: {fileID: 0}
-  tsPanel: {fileID: 8198427148529366753}
+  titleScreenManager: {fileID: 0}
+  titleScreenPanel: {fileID: 8198427148529366753}
   position: 0
 --- !u!61 &8198427148515746102
 BoxCollider2D:
@@ -2888,9 +2885,6 @@ MonoBehaviour:
   colorInactive: {r: 0, g: 0, b: 0, a: 0}
   colorActive: {r: 0, g: 0, b: 0, a: 0}
   soundModule: {fileID: 0}
-  masterVolumePanel: {fileID: 0}
-  soundEffectPanel: {fileID: 0}
-  musicPanel: {fileID: 0}
 --- !u!222 &8198427148529366754
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3067,9 +3061,6 @@ MonoBehaviour:
   colorInactive: {r: 0, g: 0, b: 0, a: 0}
   colorActive: {r: 0, g: 0, b: 0, a: 0}
   soundModule: {fileID: 0}
-  masterVolumePanel: {fileID: 0}
-  soundEffectPanel: {fileID: 0}
-  musicPanel: {fileID: 0}
 --- !u!222 &8198427148655779372
 CanvasRenderer:
   m_ObjectHideFlags: 0

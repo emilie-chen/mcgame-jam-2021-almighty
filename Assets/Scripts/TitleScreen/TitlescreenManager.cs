@@ -99,19 +99,19 @@ public class TitlescreenManager : MonoBehaviour
     }
 
     void Settings() {
-        GameObject.FindGameObjectWithTag("OptionsButton").transform.GetChild(0).gameObject.GetComponent<PopPanelTS>().Activate();
+        GameObject.FindGameObjectWithTag("OptionsButton").transform.GetChild(0).gameObject.GetComponent<PopPanelTitleScreen>().Activate();
         popUpOpen = true;
     }
 
     void Credits()
     {
-        GameObject.FindGameObjectWithTag("CreditsButton").transform.GetChild(0).gameObject.GetComponent<PopPanelTS>().Activate();
+        GameObject.FindGameObjectWithTag("CreditsButton").transform.GetChild(0).gameObject.GetComponent<PopPanelTitleScreen>().Activate();
         popUpOpen = true;
     }
 
     void ExitGame()
     {
-        GameObject.FindGameObjectWithTag("ExitButton").transform.GetChild(0).gameObject.GetComponent<PopPanelTS>().Activate();
+        GameObject.FindGameObjectWithTag("ExitButton").transform.GetChild(0).gameObject.GetComponent<PopPanelTitleScreen>().Activate();
         popUpOpen = true;
     }
 
