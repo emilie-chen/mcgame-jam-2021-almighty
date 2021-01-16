@@ -112,15 +112,22 @@ public class PlayerCameraController : MonoBehaviour
 
         if (m_MouseLocked)
         {
-            m_Camera.transform.Rotate(Vector3.up, 300.0f * MAIN_CAM_DELTA_TIME * Input.GetAxis("Mouse X"));
-            m_Camera.transform.Rotate(Vector3.right, -300.0f * MAIN_CAM_DELTA_TIME * Input.GetAxis("Mouse Y"));
-
-            m_Camera.transform.Translate(new Vector3(0.0f, input.y, 0.0f), Space.World);
-            m_Camera.transform.Translate(Vector3.ProjectOnPlane(m_Camera.transform.forward, Vector3.up).normalized * input.z, Space.World);
-            m_Camera.transform.Translate(Vector3.ProjectOnPlane(m_Camera.transform.right, Vector3.up).normalized * input.x, Space.World);
+            Rigidbody parentRb = transform.parent.GetComponent<Rigidbody>();
+            // reset horizontal (xz) speed to 0
+            Vector3 originalVel = parentRb.velocity;
+            originalVel.x = 0.0f;
+            originalVel.z = 0.0f;
+            parentRb.velocity = originalVel;
+            transform.parent.Rotate(Vector3.up, 300.0f * MAIN_CAM_DELTA_TIME * Input.GetAxis("Mouse X"));
+            transform.parent.Rotate(Vector3.right, -300.0f * MAIN_CAM_DELTA_TIME * Input.GetAxis("Mouse Y"));
+            //transform.parent.Translate(new Vector3(0.0f, input.y, 0.0f), Space.World);
+            //transform.parent.Translate(Vector3.ProjectOnPlane(transform.parent.transform.forward, Vector3.up).normalized * input.z, Space.World);
+            parentRb.velocity += Vector3.ProjectOnPlane(transform.parent.transform.forward, Vector3.up).normalized * input.z * 30;
+            //transform.parent.Translate(Vector3.ProjectOnPlane(transform.parent.transform.right, Vector3.up).normalized * input.x, Space.World);
+            parentRb.velocity += Vector3.ProjectOnPlane(transform.parent.transform.right, Vector3.up).normalized * input.x * 30;
         }
-        m_Camera.transform.rotation = Quaternion.Euler(m_Camera.transform.rotation.eulerAngles.x,
-            m_Camera.transform.rotation.eulerAngles.y, 0.0f);
+        transform.parent.transform.rotation = Quaternion.Euler(transform.parent.transform.rotation.eulerAngles.x,
+            transform.parent.transform.rotation.eulerAngles.y, 0.0f);
     }
 
     private Vector4 GetUserInput()
@@ -144,16 +151,6 @@ public class PlayerCameraController : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             input.x = 1.0f;
-        }
-
-        if (Input.GetKey(KeyCode.Space))
-        {
-            input.y = 1.0f;
-        }
-
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            input.y = -1.0f;
         }
 
         if (Input.GetKey(KeyCode.LeftControl))
