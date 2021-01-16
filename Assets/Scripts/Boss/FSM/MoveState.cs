@@ -20,7 +20,7 @@ public class MoveState : INPCState
     /// Maximum range from player
     /// </summary>
     [SerializeField]
-    private float m_MaxRadius = 150.0f;
+    private float m_MaxRadius = 30.0f;
 
 
 #region FSMMethods
@@ -37,20 +37,20 @@ public class MoveState : INPCState
     {
         Vector3 offset = npc.transform.position - m_Destination.position;
         float sqrLen = offset.sqrMagnitude;
-        if (!IsLineOfSight(npc))
-        {
-            if ( sqrLen > GetSqrDist(m_MaxRadius) )
-                npc.m_NavMeshAgent.SetDestination(m_Destination.position);
-        }
-        //else
-        //{
-        //    Vector3 targetPosition = offset.normalized * -m_MinRadius;
-        //    npc.m_NavMeshAgent.SetDestination(targetPosition);
-        //    npc.transform.rotation.SetLookRotation(m_Destination.position);
-        //}
+
+        if (sqrLen < GetSqrDist(m_MaxRadius) && sqrLen > GetSqrDist(m_MinRadius))
+            npc.m_NavMeshAgent.isStopped = true;
+        else
+            npc.m_NavMeshAgent.isStopped = false;
+
+        npc.m_NavMeshAgent.SetDestination(StayInRange(npc));
+
+        npc.m_NavMeshAgent.SetDestination(Avoidance(npc));
 
         if (IsLineOfSight(npc) && sqrLen < GetSqrDist(m_MaxRadius) && offset.sqrMagnitude > GetSqrDist(m_MinRadius))
-            ExitState(npc.m_AttackState, npc);
+            return ExitState(npc.m_AttackState, npc);
+
+
 
         return this;
     }
@@ -75,12 +75,40 @@ public class MoveState : INPCState
     private bool IsLineOfSight(BossController npc)
     {
         RaycastHit hit;
-        if(Physics.Raycast(npc.transform.position, npc.transform.position - m_Destination.transform.position, out hit, 100))
+        Ray ray = new Ray();
+        ray.origin = npc.transform.position;
+        
+        ray.direction = m_Destination.position - npc.transform.position;
+        
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity))
         {
-            Debug.DrawRay(npc.transform.position, (m_Destination.position - npc.transform.position) * 100, Color.green);
-            return true;
+            if (hit.collider.gameObject.GetComponent<PlayerBehavior>())
+                return true;
+            return false;
         }
         return false;
+    }
+    
+    private Vector3 StayInRange(BossController npc)
+    {
+        Vector3 centerOffset = m_Destination.position - npc.transform.position;
+        float t = centerOffset.magnitude / m_MaxRadius;
+        if (t < 0.9f)
+        {
+            return Vector3.zero;
+        }
+        return centerOffset * t * t;
+    }
+
+    private Vector3 Avoidance(BossController npc)
+    {
+        Vector3 avoidance = Vector3.zero;
+        if (Vector3.SqrMagnitude(m_Destination.position - npc.transform.position) < GetSqrDist(m_MinRadius))
+        {
+            avoidance += npc.transform.position - m_Destination.position;
+        }
+
+        return avoidance;
     }
 
     #endregion

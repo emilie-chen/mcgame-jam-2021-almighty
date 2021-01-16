@@ -42,7 +42,7 @@ public class BossController : MonoBehaviour
     void Update()
     {
         m_CurrentState = m_CurrentState.UpdateState(npc: this);
-
+        Debug.Log(m_CurrentState);
         Immunity();
     }
 
@@ -116,5 +116,10 @@ public class BossController : MonoBehaviour
     public Transform GetPlayer()
     {
         return m_Target;
+    }
+
+    public void SetState(INPCState newState)
+    {
+        m_CurrentState = newState;
     }
 }
