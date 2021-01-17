@@ -11173,6 +11173,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 92a80043074e1f74cb38815d262c1421, type: 3}
   - {fileID: 8300000, guid: 23fa9a7f70c20904ba6806dcea88f698, type: 3}
   - {fileID: 8300000, guid: 89dc02af2df4a7448be967ea2b216321, type: 3}
+  - {fileID: 8300000, guid: 7b6f5cf107c1f2d4cbcfe139833e4402, type: 3}
   hasRandomPitch: 1
   minPitch: 0.85
   maxPitch: 1.15
