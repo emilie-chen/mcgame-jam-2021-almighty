@@ -22,7 +22,7 @@ public class BossController : MonoBehaviour
     public NavMeshAgent m_NavMeshAgent;
 
     [SerializeField]
-    protected float m_hp = 100;
+    //protected DamagableEntity m_hp;
 
     /// <summary>
     /// Used to give invulnerability time to boss
@@ -36,25 +36,26 @@ public class BossController : MonoBehaviour
     {
         m_Target = FindObjectOfType<PlayerBehavior>().transform; //This should be done the other way, with player registering itself
         m_CurrentState = m_MoveState.EnterState(npc: this);
+        //m_hp = GetComponent<DamagableEntity>();
     }
 
     // Update is called once per frame
     void Update()
     {
         m_CurrentState = m_CurrentState.UpdateState(npc: this);
-        Debug.Log(m_CurrentState);
+        //Debug.Log(m_CurrentState);
         Immunity();
     }
 
     public float Gethp()
     {
-        return m_hp;
+        return GetComponent<DamagableEntity>().Health;
     }
 
-    private void Sethp(float newhp)
-    {
-        m_hp = newhp;
-    }
+    //private void Sethp(float newhp)
+    //{
+    //    m_hp.Health = (int)newhp;
+    //}
 
     /// <summary>
     /// Used to trigger death state and logic
@@ -66,7 +67,7 @@ public class BossController : MonoBehaviour
 
     public void OnDamageRecieved(float dmg)
     {
-        Sethp(m_hp - dmg);
+        //Sethp(m_hp.Health - dmg);
         m_IsImmune = true;
 
         if (Gethp() <= 0)

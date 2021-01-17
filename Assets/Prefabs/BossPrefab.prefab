@@ -61,6 +61,7 @@ GameObject:
   - component: {fileID: 8646577987700308950}
   - component: {fileID: 9080285170790459018}
   - component: {fileID: -617514302832141426}
+  - component: {fileID: 5792975130251734012}
   m_Layer: 0
   m_Name: BossPrefab
   m_TagString: Untagged
@@ -194,3 +195,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5792975130251734012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8646577987700308945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21b869edbde7545e494cc16257a22f25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 100
+  Health: 100
