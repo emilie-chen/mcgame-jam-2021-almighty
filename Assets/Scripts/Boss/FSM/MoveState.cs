@@ -65,7 +65,7 @@ public class MoveState : INPCState
             npc.m_NavMeshAgent.SetDestination(npc.GetPlayer().transform.position);
         }
 
-        if (IsLineOfSight(npc) && sqrLen < GetSqrDist(MAX_RADIUS) && offset.sqrMagnitude > GetSqrDist(MIN_RADIUS) && m_Timer >= m_MoveTime)
+        if (IsLineOfSight(npc) && sqrLen < GetSqrDist(MAX_RADIUS) && offset.sqrMagnitude > GetSqrDist(MIN_RADIUS) || m_Timer >= m_MoveTime)
             return ExitState(npc.m_AttackState, npc);
         
         return this;
