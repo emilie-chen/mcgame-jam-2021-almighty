@@ -77,6 +77,10 @@ public class DamagableEntity : MonoBehaviour
         }
         else if (Health <= 0)
         {
+            if (gameObject.tag == "NPC") {
+                GameObject.FindGameObjectWithTag("Player").GetComponent<PlaySounds>().playSound(Random.Range(0,1));
+            }
+
             Die();
         }
     }
