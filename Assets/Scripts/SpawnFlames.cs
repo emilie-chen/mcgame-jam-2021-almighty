@@ -19,7 +19,7 @@ public class SpawnFlames : MonoBehaviour
     {
     }
 
-    public void SpawnFlame() {
+    public virtual void SpawnFlame() {
         Instantiate(smoke, spawnPoint.transform.position, Quaternion.identity);
         Instantiate(fireball, spawnPoint.transform.position, transform.rotation);
     }

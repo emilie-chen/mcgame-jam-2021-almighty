@@ -52,7 +52,7 @@ public class NPCManager : MonoBehaviour
             m_NpcSet = new HashSet<GameObject>();
             foreach (GameObject npc in npcs)
             {
-                npc.GetComponent<DamagableEntity>().DeathHandler += npc => m_NpcSet.Remove(npc);
+                npc.GetComponent<DamagableEntity>().DeathHandler += self => m_NpcSet.Remove(self);
                 m_NpcSet.Add(npc);
             }
             // report the new number to the game manager

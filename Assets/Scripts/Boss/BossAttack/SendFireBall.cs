@@ -28,9 +28,9 @@ public class SendFireBall : SpawnFlames
         
         Quaternion rot = Quaternion.LookRotation(dir, Vector3.up);
         return rot;
-}
+    }
 
-    public void SpawnFlame()
+    public override void SpawnFlame()
     {
         Instantiate(smoke, spawnPoint.transform.position, SetDir(m_Target));
         Instantiate(fireball, spawnPoint.transform.position, SetDir(m_Target));

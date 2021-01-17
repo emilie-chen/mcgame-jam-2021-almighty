@@ -10,7 +10,7 @@ public class AttackState : INPCState
     private float m_Timer;
     private float m_FireTimer;
     private const float MAX_TIME = 3;
-    private const float FIRE_RATE = 0.3f;
+    private const float FIRE_RATE = 0.5f;
 
     //Used for inaccuracy
     private const float VERTICAL_OFF = 4;
@@ -64,7 +64,7 @@ public class AttackState : INPCState
         //if the target is stopping or if it is impossible for the projectile to catch up with the target (Sine Formula)
         if (targetVelocity.magnitude == 0 || targetVelocity.magnitude > projectileSpeed && Mathf.Sin(targetMoveAngle) / projectileSpeed > Mathf.Cos(targetMoveAngle) / targetVelocity.magnitude)
         {
-            Debug.Log("Position prediction is not feasible.");
+            //Debug.Log("Position prediction is not feasible.");
             return targetPosition;
         }
         //also Sine Formula

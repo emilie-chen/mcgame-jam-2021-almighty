@@ -28,6 +28,8 @@ public class GameManager : MonoBehaviour
     public AudioSource au2;
     public AudioSource au3;
 
+    public BossController bossHealth;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +43,8 @@ public class GameManager : MonoBehaviour
 
         Invoke(nameof(FirstDialoguesSequence), 3);
 
+        bossHealth = GameObject.Find("boss")?.GetComponent<BossController>();
+
     }
 
     // Update is called once per frame
@@ -51,7 +55,8 @@ public class GameManager : MonoBehaviour
             GoEndGame();
         }
 
-        if (SceneManager.GetActiveScene().name == "Game" || SceneManager.GetActiveScene().name == "TommyTestZone") { 
+        if (SceneManager.GetActiveScene().name == "Game") {
+            bossLifePercentage = bossHealth.Hp / bossHealth.MaxHp * 100;
             FillBossCircle(bossLifePercentage);
             FillPopulationCircle(populationPercentage);
         }

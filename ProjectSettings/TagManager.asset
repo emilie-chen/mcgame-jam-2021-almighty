@@ -15,6 +15,7 @@ TagManager:
   - ExitButton
   - NewGameButton
   - GoToMenu
+  - Boss
   layers:
   - Default
   - TransparentFX
