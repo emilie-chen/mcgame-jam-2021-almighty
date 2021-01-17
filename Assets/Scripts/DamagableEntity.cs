@@ -37,12 +37,39 @@ public class DamagableEntity : MonoBehaviour
         CheckHealth();
     }
 
+    public void ReceiveChildCollision(Collision collision)
+    {
+        collision.collider.gameObject.TryGetComponent<DamagingEntityProps>(out DamagingEntityProps damagingEntityProps);
+        if (damagingEntityProps == null)
+            return;
+
+        if (!damagingEntityProps.IsEnabled)
+            return;
+
+        damagingEntityProps.IsEnabled = false;
+
+        int damage = damagingEntityProps.Damage;
+        int knockback = damagingEntityProps.Knockback;
+
+        Destroy(collision.collider.gameObject);
+
+        Health -= damage;
+
+        Vector3 kbDir = collision.contacts[0].normal;
+
+        TryGetComponent<Rigidbody>(out Rigidbody rb);
+        rb?.AddForce(kbDir * knockback, ForceMode.Force);
+
+
+        CheckHealth();
+    }
+
     private void Die()
     {
         DeathHandler?.Invoke(gameObject);
     }
 
-    private void CheckHealth()
+    public void CheckHealth()
     {
         if (Health > MaxHealth)
         {
