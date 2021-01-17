@@ -12,6 +12,10 @@ public class AttackState : INPCState
     private const float MAX_TIME = 3;
     private const float FIRE_RATE = 0.3f;
 
+    //Used for inaccuracy
+    private const float VERTICAL_OFF = 4;
+    private const float HORIZONTAL_OFF = 2;
+
     private const float MAX_RANGE = 150;
     private SendFireBall m_FireSender;
 
@@ -65,7 +69,23 @@ public class AttackState : INPCState
         }
         //also Sine Formula
         float shootAngle = Mathf.Asin(Mathf.Sin(targetMoveAngle) * targetVelocity.magnitude / projectileSpeed);
+        
+        //TEMPORARY
+        shootAngle += Random.Range(0, VERTICAL_OFF);
+
+
         return targetPosition + targetVelocity * displacement.magnitude / Mathf.Sin(Mathf.PI - targetMoveAngle - shootAngle) * Mathf.Sin(shootAngle) / targetVelocity.magnitude;
+    }
+
+    //NOT USED YET
+    private Vector3 Inaccuracy()
+    {
+        Vector3 randomRot = new Vector3();
+        randomRot = Vector3.forward;
+        randomRot.x = Random.Range(-HORIZONTAL_OFF, HORIZONTAL_OFF);
+        randomRot.y = Random.Range(1, VERTICAL_OFF);
+
+        return randomRot;
     }
 
     #endregion
