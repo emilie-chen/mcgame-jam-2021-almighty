@@ -21877,6 +21877,10 @@ PrefabInstance:
       propertyPath: badEndScreenImage
       value: 
       objectReference: {fileID: 21300000, guid: ab9a04319d085ed4ca59495594039dbb, type: 3}
+    - target: {fileID: 8212250316598380100, guid: 3c067304fd0ebc148ad5e39588c1dd8d, type: 3}
+      propertyPath: goodEndScreenImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 92e95dc8732ae1e4d91b9aab25a4ff20, type: 3}
     - target: {fileID: 8212250316598380101, guid: 3c067304fd0ebc148ad5e39588c1dd8d, type: 3}
       propertyPath: m_RootOrder
       value: 9

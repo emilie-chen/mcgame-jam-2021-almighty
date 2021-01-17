@@ -85,7 +85,7 @@ public class GameManager : MonoBehaviour
                 RenderSettings.skybox.SetColor("_SkyTint", Color.Lerp(RenderSettings.skybox.GetColor("_SkyTint"), darkerSkyColor, 0.03f));
             }
         }
-        else if (populationPercentage < 20)
+        else if (populationPercentage <= 20)
         {
             SetAudioState(3);
             if (RenderSettings.skybox.HasProperty("_Tint"))
