@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
 
-        if (bossLifePercentage <= 0 && SceneManager.GetActiveScene().name == "TommyTestZone") {
+        if (bossLifePercentage <= 0 && SceneManager.GetActiveScene().name == "Game") {
             GoEndGame();
         }
 
