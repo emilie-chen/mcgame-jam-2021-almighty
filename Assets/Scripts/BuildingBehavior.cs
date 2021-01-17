@@ -14,10 +14,9 @@ public class BuildingBehavior : MonoBehaviour
     {
         GameObject rubble = Instantiate(RubblePrefab);
         Vector3 newPos = transform.position;
-        newPos.y = 32.3f;
+        newPos.y = 28.0f;
         rubble.transform.position = newPos;
         Destroy(gameObject);
-        
     }
 
     void Update()

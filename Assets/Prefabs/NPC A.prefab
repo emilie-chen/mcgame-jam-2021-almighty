@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2490823813136137099}
   - component: {fileID: 2490823813136137098}
   m_Layer: 0
-  m_Name: NPC
+  m_Name: NPC A
   m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -150,11 +150,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b47bf9e7b96855848864ef4e5c49e552, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.65
+      value: 2.05
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b47bf9e7b96855848864ef4e5c49e552, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.63
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b47bf9e7b96855848864ef4e5c49e552, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2.6
+      value: 2.11
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b47bf9e7b96855848864ef4e5c49e552, type: 3}
       propertyPath: m_LocalPosition.x
