@@ -13,6 +13,15 @@ public class SendFireBall : SpawnFlames
         return m_Target;
     }
 
+    public float GetTargetDistSqr()
+    {
+        float dist;
+        Vector3 offset = m_Target - transform.position;
+        dist = offset.sqrMagnitude;
+
+        return dist;
+    }
+
     private Quaternion SetDir(Vector3 targetPos)
     {
         Vector3 dir = targetPos - transform.position;

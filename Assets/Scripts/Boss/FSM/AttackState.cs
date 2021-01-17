@@ -12,6 +12,7 @@ public class AttackState : INPCState
     private const float MAX_TIME = 3;
     private const float FIRE_RATE = 0.3f;
 
+    private const float MAX_RANGE = 150;
     private SendFireBall m_FireSender;
 
 #region FSM Methods
@@ -27,6 +28,9 @@ public class AttackState : INPCState
         m_FireTimer += Time.deltaTime;
 
         m_FireSender.SetTarget(PredictedPosition(npc.GetPlayer().transform.position, npc.transform.position, npc.GetPlayer().GetComponent<Rigidbody>().velocity, m_FireSender.GetProjectileSpeed()));
+
+        if (m_FireSender.GetTargetDistSqr() > (MAX_RANGE * MAX_RANGE))
+            return ExitState(npc.m_MoveState, npc); //If target is too far, proceed to move
 
         if (m_FireTimer >= FIRE_RATE)
         {
@@ -48,12 +52,6 @@ public class AttackState : INPCState
 #endregion
 
 #region State Specific
-
-    //Overall attack logic
-    private void AttackTarget(PlayerBehavior target)
-    {
-        
-    }
 
     private Vector3 PredictedPosition(Vector3 targetPosition, Vector3 shooterPosition, Vector3 targetVelocity, float projectileSpeed)
     {
