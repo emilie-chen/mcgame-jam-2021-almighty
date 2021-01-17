@@ -11,7 +11,6 @@ public class AttackState : INPCState
 #region FSM Methods
     public INPCState EnterState(BossController npc)
     {
-        Debug.Log("Attack State");
         return this;
     }
 
