@@ -26,6 +26,12 @@ public class TitlescreenManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (SceneManager.GetActiveScene().name == "End Screen" ) {
+            if (Input.GetMouseButtonDown(0)) {
+                Invoke(nameof(GoToMenu), 5f);
+            }
+        }
+
         float verticalAxis = Input.GetAxisRaw("Vertical");
 
             if (!popUpOpen)
