@@ -5,16 +5,15 @@ using UnityEngine;
 public class SendDamageToBossScript : MonoBehaviour
 {
 
-    public DamagableEntity boss;
+    private BossController boss;
 
     private void Start()
     {
-        boss = GameObject.Find("boss").GetComponent<DamagableEntity>();
+        boss = GameObject.Find("boss").GetComponent<BossController>();
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        print("COLLISION");
-        boss.ReceiveChildCollision(collision);
+        boss.OnCollisionEnter(collision);
     }
 }

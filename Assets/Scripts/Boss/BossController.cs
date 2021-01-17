@@ -27,8 +27,8 @@ public class BossController : MonoBehaviour
     /// <summary>
     /// Used to give invulnerability time to boss
     /// </summary>
-    private float   m_ImmuneTime    = 0.5f;
-    private bool    m_IsImmune      = false;
+    private const float IMMUNE_TIME = 0.5f;
+    private bool m_IsImmune = false;
 
     Transform  m_Target;
 
@@ -44,18 +44,15 @@ public class BossController : MonoBehaviour
     {
         m_CurrentState = m_CurrentState.UpdateState(npc: this);
         //Debug.Log(m_CurrentState);
-        Immunity();
     }
 
-    public float Gethp()
+    public float Hp
     {
-        return GetComponent<DamagableEntity>().Health;
+        get => GetComponent<DamagableEntity>().Health;
+        set => GetComponent<DamagableEntity>().Health = (int)value;
     }
 
-    //private void Sethp(float newhp)
-    //{
-    //    m_hp.Health = (int)newhp;
-    //}
+    public float MaxHp => GetComponent<DamagableEntity>().MaxHealth;
 
     /// <summary>
     /// Used to trigger death state and logic
@@ -67,15 +64,17 @@ public class BossController : MonoBehaviour
 
     public void OnDamageRecieved(float dmg)
     {
-        //Sethp(m_hp.Health - dmg);
+        Hp -= dmg;
         m_IsImmune = true;
 
-        if (Gethp() <= 0)
+        if (Hp <= 0)
             OnNoMorehp();
+
+        Invoke(nameof(RemoveImmunity), IMMUNE_TIME);
     }
 
 
-    private void OnCollisionEnter(Collision collision)
+    public void OnCollisionEnter(Collision collision)
     {
         collision.collider.gameObject.TryGetComponent<DamagingEntityProps>(out DamagingEntityProps damagingEntityProps);
         if (damagingEntityProps == null)
@@ -85,7 +84,7 @@ public class BossController : MonoBehaviour
             return;
 
         damagingEntityProps.IsEnabled = false;
-        
+
         int knockback = damagingEntityProps.Knockback;
 
         Destroy(collision.collider.gameObject);
@@ -94,7 +93,7 @@ public class BossController : MonoBehaviour
 
         Rigidbody rb = GetComponent<Rigidbody>();
         rb.AddForce(kbDir * knockback, ForceMode.Force);
-
+        Debug.Log(m_IsImmune ? "Immune" : "Non immune");
         if (!m_IsImmune)
             OnDamageRecieved(damagingEntityProps.Damage);
     }
@@ -102,16 +101,9 @@ public class BossController : MonoBehaviour
     /// <summary>
     /// Immunity after hit event
     /// </summary>
-    private void Immunity()
+    private void RemoveImmunity()
     {
-        if (m_IsImmune)
-        {
-            float timer = 0;
-            timer += Time.deltaTime;
-
-            if (timer >= m_ImmuneTime)
-                m_IsImmune = false;
-        }
+        m_IsImmune = false;
     }
 
     public Transform GetPlayer()

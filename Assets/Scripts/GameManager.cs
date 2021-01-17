@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
 
         Invoke(nameof(FirstDialoguesSequence), 3);
 
-        bossHealth = GameObject.Find("boss").GetComponent < BossController>();
+        bossHealth = GameObject.Find("boss")?.GetComponent<BossController>();
 
     }
 
@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour
         }
 
         if (SceneManager.GetActiveScene().name == "Game") {
-            bossLifePercentage = bossHealth.Gethp();
+            bossLifePercentage = bossHealth.Hp / bossHealth.MaxHp * 100;
             FillBossCircle(bossLifePercentage);
             FillPopulationCircle(populationPercentage);
         }
