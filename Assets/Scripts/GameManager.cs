@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
     public AudioSource au2;
     public AudioSource au3;
 
-    public DamagableEntity bossHealth;
+    public BossController bossHealth;
 
     // Start is called before the first frame update
     void Start()
@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
 
         Invoke(nameof(FirstDialoguesSequence), 3);
 
-        bossHealth = GameObject.Find("boss").GetComponent<DamagableEntity>();
+        bossHealth = GameObject.Find("boss").GetComponent < BossController>();
 
     }
 
@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour
         }
 
         if (SceneManager.GetActiveScene().name == "Game") {
-            bossLifePercentage = bossHealth.Health;
+            bossLifePercentage = bossHealth.Gethp();
             FillBossCircle(bossLifePercentage);
             FillPopulationCircle(populationPercentage);
         }
