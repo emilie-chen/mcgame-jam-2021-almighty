@@ -9,6 +9,10 @@ public class NPCManager : MonoBehaviour
     public const float NPC_RUNAWAY_RANGE = 20.0f;
     public const float NPC_RUN_DIST = 60.0f;
     public const float STANDARD_NPC_HEIGHT = 30.0f;
+    public float MaxNpcCount
+    {
+        get; private set;
+    }
 
     public static NPCManager Instance
     {
@@ -50,12 +54,15 @@ public class NPCManager : MonoBehaviour
                 npc.GetComponent<DamagableEntity>().DeathHandler += npc => m_NpcSet.Remove(npc);
                 m_NpcSet.Add(npc);
             }
+            // report the new number to the game manager
+            GameObject.Find("Game UI").GetComponent<GameManager>().populationPercentage = m_NpcSet.Count / (float)MaxNpcCount * 100.0f;
         }
     }
 
     void Start()
     {
         UpdateNpcIndices();
+        MaxNpcCount = m_NpcSet.Count;
         Instance = this;
         InvokeRepeating(nameof(UpdateNpcIndices), 1.0f, 1.0f);
     }

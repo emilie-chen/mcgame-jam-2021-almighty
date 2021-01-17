@@ -20,6 +20,10 @@ public class GameManager : MonoBehaviour
     public bool characterDialogBoxShown;
     private List<string> characterDialogues;
 
+    public Color baseSkyColor;
+    public Color darkerSkyColor;
+    public Color redSkyColor;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -60,6 +64,40 @@ public class GameManager : MonoBehaviour
                      new Vector3(0, -20, 0), 0.03f);
             }
         }
+
+
+        if (populationPercentage < 60 && populationPercentage > 20) {
+
+            if (RenderSettings.skybox.HasProperty("_Tint"))
+            {
+                RenderSettings.skybox.SetColor("_Tint", Color.Lerp(RenderSettings.skybox.GetColor("_Tint"), darkerSkyColor, 0.03f));
+            }
+            else if (RenderSettings.skybox.HasProperty("_SkyTint")) {
+                RenderSettings.skybox.SetColor("_SkyTint", Color.Lerp(RenderSettings.skybox.GetColor("_SkyTint"), darkerSkyColor, 0.03f));
+            }
+        }
+        else if (populationPercentage < 20)
+        {
+            if (RenderSettings.skybox.HasProperty("_Tint"))
+            {
+                RenderSettings.skybox.SetColor("_Tint", Color.Lerp(RenderSettings.skybox.GetColor("_Tint"), redSkyColor, 0.03f));
+            }
+            else if (RenderSettings.skybox.HasProperty("_SkyTint"))
+            {
+                RenderSettings.skybox.SetColor("_SkyTint", Color.Lerp(RenderSettings.skybox.GetColor("_SkyTint"), redSkyColor, 0.03f));
+            }
+        } else 
+        {
+            if (RenderSettings.skybox.HasProperty("_Tint"))
+            {
+                RenderSettings.skybox.SetColor("_Tint", Color.Lerp(RenderSettings.skybox.GetColor("_Tint"), baseSkyColor, 0.03f));
+            }
+            else if (RenderSettings.skybox.HasProperty("_SkyTint"))
+            {
+                RenderSettings.skybox.SetColor("_SkyTint", Color.Lerp(RenderSettings.skybox.GetColor("_SkyTint"), baseSkyColor, 0.03f));
+            }
+        }
+
     }
 
     public GameObject getInstance() {
