@@ -16,6 +16,9 @@ public class AttackState : INPCState
 
     public INPCState UpdateState(BossController npc)
     {
+        //Last value should be taken from fireball class directly once attached to Boss prefab
+        PredictedPosition(npc.GetPlayer().transform.position, npc.transform.position, npc.GetPlayer().GetComponent<Rigidbody>().velocity, 100);
+
         return this;
     }
 
@@ -34,11 +37,20 @@ public class AttackState : INPCState
         
     }
 
-    //Used for projectile targeting
-    //private Vector3 SetTarget()
-    //{
-    //
-    //}
+    private Vector3 PredictedPosition(Vector3 targetPosition, Vector3 shooterPosition, Vector3 targetVelocity, float projectileSpeed)
+    {
+        Vector3 displacement = targetPosition - shooterPosition;
+        float targetMoveAngle = Vector3.Angle(-displacement, targetVelocity) * Mathf.Deg2Rad;
+        //if the target is stopping or if it is impossible for the projectile to catch up with the target (Sine Formula)
+        if (targetVelocity.magnitude == 0 || targetVelocity.magnitude > projectileSpeed && Mathf.Sin(targetMoveAngle) / projectileSpeed > Mathf.Cos(targetMoveAngle) / targetVelocity.magnitude)
+        {
+            Debug.Log("Position prediction is not feasible.");
+            return targetPosition;
+        }
+        //also Sine Formula
+        float shootAngle = Mathf.Asin(Mathf.Sin(targetMoveAngle) * targetVelocity.magnitude / projectileSpeed);
+        return targetPosition + targetVelocity * displacement.magnitude / Mathf.Sin(Mathf.PI - targetMoveAngle - shootAngle) * Mathf.Sin(shootAngle) / targetVelocity.magnitude;
+    }
 
-#endregion
+    #endregion
 }
