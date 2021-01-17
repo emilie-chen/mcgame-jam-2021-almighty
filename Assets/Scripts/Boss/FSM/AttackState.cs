@@ -10,7 +10,7 @@ public class AttackState : INPCState
     private float m_Timer;
     private float m_FireTimer;
     private const float MAX_TIME = 3;
-    private const float FIRE_RATE = 0.3f;
+    private const float FIRE_RATE = 0.5f;
 
     //Used for inaccuracy
     private const float VERTICAL_OFF = 4;
