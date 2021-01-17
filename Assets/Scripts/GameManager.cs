@@ -85,7 +85,7 @@ public class GameManager : MonoBehaviour
                 RenderSettings.skybox.SetColor("_SkyTint", Color.Lerp(RenderSettings.skybox.GetColor("_SkyTint"), darkerSkyColor, 0.03f));
             }
         }
-        else if (populationPercentage < 20)
+        else if (populationPercentage <= 20)
         {
             SetAudioState(3);
             if (RenderSettings.skybox.HasProperty("_Tint"))
@@ -210,7 +210,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void FirstDialoguesSequence() {
-        enqueueCharacterDialogue("Oh no... I need to save the city !");
+        enqueueCharacterDialogue("What now...");
         enqueueCharacterDialogue("I can walk with [W][A][S][D]\nI can jump with [Spacebar]");
         enqueueCharacterDialogue("I can sprint with [Ctrl]\nAnd finally, I can send fireballs with [Left click button]");
     }
