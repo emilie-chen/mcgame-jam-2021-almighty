@@ -8,19 +8,31 @@ using UnityEngine;
 public class AttackState : INPCState
 {
     private float m_Timer;
+    private float m_FireTimer;
     private const float MAX_TIME = 3;
+    private const float FIRE_RATE = 0.3f;
+
+    private SendFireBall m_FireSender;
 
 #region FSM Methods
     public INPCState EnterState(BossController npc)
     {
+        m_FireSender = npc.GetComponentInChildren<SendFireBall>();
         return this;
     }
 
     public INPCState UpdateState(BossController npc)
     {
         m_Timer += Time.deltaTime;
-        //Last value should be taken from fireball class directly once attached to Boss prefab
-        PredictedPosition(npc.GetPlayer().transform.position, npc.transform.position, npc.GetPlayer().GetComponent<Rigidbody>().velocity, 100);
+        m_FireTimer += Time.deltaTime;
+
+        m_FireSender.SetTarget(PredictedPosition(npc.GetPlayer().transform.position, npc.transform.position, npc.GetPlayer().GetComponent<Rigidbody>().velocity, m_FireSender.GetProjectileSpeed()));
+
+        if (m_FireTimer >= FIRE_RATE)
+        {
+            m_FireSender.SpawnFlame();
+            m_FireTimer -= FIRE_RATE;
+        }
 
         if (m_Timer >= MAX_TIME)
             return ExitState(npc.m_MoveState, npc);
