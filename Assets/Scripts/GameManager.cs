@@ -55,6 +55,11 @@ public class GameManager : MonoBehaviour
             GoEndGame();
         }
 
+        if (populationPercentage <= 0 && SceneManager.GetActiveScene().name == "Game")
+        {
+            GoEndGame();
+        }
+
         if (SceneManager.GetActiveScene().name == "Game") {
             bossLifePercentage = bossHealth.Hp / bossHealth.MaxHp * 100;
             FillBossCircle(bossLifePercentage);
