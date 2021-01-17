@@ -36,12 +36,15 @@ public class ScoresHolder : MonoBehaviour
 
             if (populationPercentage > 20f)
             {
+
+                GameObject.Find("FinalTitleText").GetComponent<Text>().text = "You saved the day\n...with minimal casualties";
                 GameObject.Find("EndingImage").GetComponent<Image>().sprite = goodEndScreenImage;
                 audioSourceGoodEnding.volume = Mathf.Lerp(audioSourceGoodEnding.volume, 0.6f, 0.03f);
                 audioSourceBadEnding.volume = Mathf.Lerp(audioSourceBadEnding.volume, 0, 0.03f);
 
             }
             else {
+                GameObject.Find("FinalTitleText").GetComponent<Text>().text = "Uhhhh you were supposed\nto save everybody...";
                 GameObject.Find("EndingImage").GetComponent<Image>().sprite = badEndScreenImage;
                 audioSourceBadEnding.volume =  Mathf.Lerp(audioSourceBadEnding.volume, 0, 0.03f);
                 audioSourceGoodEnding.volume = Mathf.Lerp(audioSourceGoodEnding.volume, 0.6f, 0.03f);

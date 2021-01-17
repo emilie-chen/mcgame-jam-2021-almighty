@@ -808,7 +808,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -110, y: 14}
+  m_AnchoredPosition: {x: -195, y: 30}
   m_SizeDelta: {x: 1200, y: 595}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1028523154804492939
@@ -1002,7 +1002,7 @@ GameObject:
   - component: {fileID: 1028523155893171079}
   - component: {fileID: 1028523155893171078}
   m_Layer: 5
-  m_Name: Title
+  m_Name: FinalTitleText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1024,7 +1024,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6, y: -70}
+  m_AnchoredPosition: {x: 6, y: -194}
   m_SizeDelta: {x: 1200, y: 595}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1028523155893171078
@@ -1049,7 +1049,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: a46084427626a7e44941541be36d7cc1, type: 3}
-    m_FontSize: 30
+    m_FontSize: 41
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -1060,7 +1060,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: YAY
+  m_Text: "Uhhhh you were supposed \nto save everybody..."
 --- !u!222 &1028523155893171079
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1105,7 +1105,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -501, y: -319.0001}
+  m_AnchoredPosition: {x: -588, y: -340}
   m_SizeDelta: {x: 406, y: 595}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1028523156174760198
@@ -1355,7 +1355,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 641, y: 59}
+  m_AnchoredPosition: {x: 554.0005, y: 38.000122}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0, y: 0}
 --- !u!1 &8035027659443093727

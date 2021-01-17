@@ -210,7 +210,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void FirstDialoguesSequence() {
-        enqueueCharacterDialogue("Oh no... I need to save the city !");
+        enqueueCharacterDialogue("What now...");
         enqueueCharacterDialogue("I can walk with [W][A][S][D]\nI can jump with [Spacebar]");
         enqueueCharacterDialogue("I can sprint with [Ctrl]\nAnd finally, I can send fireballs with [Left click button]");
     }
