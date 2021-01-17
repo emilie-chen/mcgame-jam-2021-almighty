@@ -47,7 +47,7 @@ public class TitlescreenManager : MonoBehaviour
                     {
                         canButtonDown = false;
                         ExecuteButton(buttonPosition);
-                        soundModule.playSound(0);
+                        soundModule.playSound(1);
                 }
             }
             }
@@ -140,7 +140,7 @@ public class TitlescreenManager : MonoBehaviour
         if (!popUpOpen && canButtonDown) { 
             canButtonDown = false;
             ExecuteButton(buttonPosition);
-            soundModule.playSound(0);
+            soundModule.playSound(1);
         }
     }
 
