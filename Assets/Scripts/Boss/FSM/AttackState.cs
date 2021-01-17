@@ -7,6 +7,8 @@ using UnityEngine;
 /// </summary>
 public class AttackState : INPCState
 {
+    private float m_Timer;
+    private const float MAX_TIME = 3;
 
 #region FSM Methods
     public INPCState EnterState(BossController npc)
@@ -16,8 +18,12 @@ public class AttackState : INPCState
 
     public INPCState UpdateState(BossController npc)
     {
+        m_Timer += Time.deltaTime;
         //Last value should be taken from fireball class directly once attached to Boss prefab
         PredictedPosition(npc.GetPlayer().transform.position, npc.transform.position, npc.GetPlayer().GetComponent<Rigidbody>().velocity, 100);
+
+        if (m_Timer >= MAX_TIME)
+            return ExitState(npc.m_MoveState, npc);
 
         return this;
     }

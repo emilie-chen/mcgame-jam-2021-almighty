@@ -51,22 +51,19 @@ public class MoveState : INPCState
         
         npc.m_NavMeshAgent.SetDestination(m_DestPos);
 
-        if (StayInRange(npc) != Vector3.zero)
-            npc.m_NavMeshAgent.SetDestination(StayInRange(npc));
-        
-        if (Avoidance(npc) != Vector3.zero)
-            npc.m_NavMeshAgent.SetDestination(Avoidance(npc));
+        //CAUSE ISSUE, KEEP FOR REFERENCE
+        //if (StayInRange(npc) != Vector3.zero)
+        //    npc.m_NavMeshAgent.SetDestination(StayInRange(npc));
+        //
+        //if (Avoidance(npc) != Vector3.zero)
+        //    npc.m_NavMeshAgent.SetDestination(Avoidance(npc));
 
         NavMeshPath path = new NavMeshPath();
         npc.m_NavMeshAgent.CalculatePath(m_Destination.position, path);
         if (path.status == NavMeshPathStatus.PathPartial)
         {
-            npc.m_NavMeshAgent.SetDestination(m_Destination.position);
+            npc.m_NavMeshAgent.SetDestination(npc.GetPlayer().transform.position);
         }
-
-        //SAFEGUARD
-        if (sqrLen > 10000)
-            npc.m_NavMeshAgent.Warp(RandomPos());
 
         if (IsLineOfSight(npc) && sqrLen < GetSqrDist(MAX_RADIUS) && offset.sqrMagnitude > GetSqrDist(MIN_RADIUS) && m_Timer >= m_MoveTime)
             return ExitState(npc.m_AttackState, npc);
