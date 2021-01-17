@@ -7,17 +7,27 @@ public class FireBall : MonoBehaviour
     public float speed;
     public GameObject smoke;
     public GameObject bigSmoke;
+    public Rigidbody rb;
+    public bool bounce;
 
     // Start is called before the first frame update
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
         InvokeRepeating(nameof(Spawnsmoke), 0.05f, 0.1f);
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        GetComponent<Rigidbody>().MovePosition(transform.position + (transform.forward * speed));
+        if (bounce)
+        {
+            GetComponent<Rigidbody>().MovePosition(transform.position + (-transform.forward * speed));
+        }
+        else {
+            GetComponent<Rigidbody>().MovePosition(transform.position + (transform.forward * speed));
+
+        }
     }
 
     private void Spawnsmoke() {
@@ -27,6 +37,13 @@ public class FireBall : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         Instantiate(bigSmoke,transform.position,transform.rotation);
-        Destroy(this);
+
+        if (collision.gameObject.tag == "Building")
+        {
+            bounce = true;
+        }
+        else {
+            Destroy(this);
+        }
     }
 }

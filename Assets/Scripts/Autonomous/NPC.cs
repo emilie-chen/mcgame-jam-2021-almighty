@@ -47,9 +47,10 @@ public class NPC : MonoBehaviour
 
     private static Vector3 NewTarget()
     {
-        float x = Random.Range(-190, 190);
-        float y = Random.Range(-190, 190);
-        return new Vector3(x, 30.0f, y);
+        float x = Random.Range(-175, 110);
+        float y = Random.Range(-175, 110);
+
+        return new Vector3(x, 0, y);
     }
 
     void Update()

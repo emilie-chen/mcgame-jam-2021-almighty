@@ -143,8 +143,13 @@ public class PlayerCameraController : MonoBehaviour
             originalVel.x = 0.0f;
             originalVel.z = 0.0f;
             parentRb.velocity = originalVel;
+
             transform.parent.Rotate(Vector3.up, 300.0f * MAIN_CAM_DELTA_TIME * Input.GetAxis("Mouse X"));
             transform.parent.Rotate(Vector3.right, -300.0f * MAIN_CAM_DELTA_TIME * Input.GetAxis("Mouse Y"));
+
+            transform.parent.eulerAngles = new Vector3(ClampAngle(transform.parent.eulerAngles.x, -65,55), transform.parent.eulerAngles.y, ClampAngle(transform.parent.eulerAngles.z, -65, 55));
+
+            //transform.parent.eulerAngles = new Vector3(Mathf.Clamp(transform.parent.eulerAngles.x, -65, 35), transform.parent.eulerAngles.y, transform.parent.eulerAngles.z);
             //transform.parent.Translate(new Vector3(0.0f, input.y, 0.0f), Space.World);
             //transform.parent.Translate(Vector3.ProjectOnPlane(transform.parent.transform.forward, Vector3.up).normalized * input.z, Space.World);
             parentRb.velocity += Vector3.ProjectOnPlane(transform.parent.transform.forward, Vector3.up).normalized * input.z * 30;
@@ -156,6 +161,13 @@ public class PlayerCameraController : MonoBehaviour
          
         transform.parent.transform.rotation = Quaternion.Euler(transform.parent.transform.rotation.eulerAngles.x,
             transform.parent.transform.rotation.eulerAngles.y, 0.0f);
+    }
+
+    float ClampAngle(float angle, float from, float to)
+    {
+        if (angle < 0f) angle = 360 + angle;
+        if (angle > 180f) return Mathf.Max(angle, 360 + from);
+        return Mathf.Min(angle, to);
     }
 
     private void UpdateAnimatorStates() {
