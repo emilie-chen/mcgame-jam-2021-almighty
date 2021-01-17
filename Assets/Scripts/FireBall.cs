@@ -7,8 +7,11 @@ public class FireBall : MonoBehaviour
     public float speed;
     public GameObject smoke;
     public GameObject bigSmoke;
+    public GameObject tinySmoke;
+
     public Rigidbody rb;
     public bool bounce;
+    public bool castTinySmokeInstead;
 
     // Start is called before the first frame update
     void Start()
@@ -31,12 +34,25 @@ public class FireBall : MonoBehaviour
     }
 
     private void Spawnsmoke() {
-        Instantiate(smoke, transform.position, transform.rotation);
+        if (!castTinySmokeInstead)
+        {
+            Instantiate(smoke, transform.position, transform.rotation);
+        }
+        else
+        {
+            Instantiate(tinySmoke, transform.position, transform.rotation);
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        Instantiate(bigSmoke,transform.position,transform.rotation);
+        if (!castTinySmokeInstead)
+        {
+            Instantiate(bigSmoke, transform.position, transform.rotation);
+        }
+        else {
+            Instantiate(tinySmoke, transform.position, transform.rotation);
+        }
 
         if (collision.gameObject.tag == "Building")
         {
