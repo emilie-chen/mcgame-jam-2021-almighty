@@ -53,4 +53,9 @@ public class DamagableEntity : MonoBehaviour
             Die();
         }
     }
+
+    private void FixedUpdate()
+    {
+        CheckHealth();
+    }
 }

@@ -24,6 +24,10 @@ public class GameManager : MonoBehaviour
     public Color darkerSkyColor;
     public Color redSkyColor;
 
+    public AudioSource au1;
+    public AudioSource au2;
+    public AudioSource au3;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,6 +46,11 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (bossLifePercentage <= 0 && SceneManager.GetActiveScene().name == "Game") {
+            GoEndGame();
+        }
+
         if (SceneManager.GetActiveScene().name == "Game" || SceneManager.GetActiveScene().name == "TommyTestZone") { 
             FillBossCircle(bossLifePercentage);
             FillPopulationCircle(populationPercentage);
@@ -67,7 +76,7 @@ public class GameManager : MonoBehaviour
 
 
         if (populationPercentage < 60 && populationPercentage > 20) {
-
+            SetAudioState(2);
             if (RenderSettings.skybox.HasProperty("_Tint"))
             {
                 RenderSettings.skybox.SetColor("_Tint", Color.Lerp(RenderSettings.skybox.GetColor("_Tint"), darkerSkyColor, 0.03f));
@@ -78,6 +87,7 @@ public class GameManager : MonoBehaviour
         }
         else if (populationPercentage < 20)
         {
+            SetAudioState(3);
             if (RenderSettings.skybox.HasProperty("_Tint"))
             {
                 RenderSettings.skybox.SetColor("_Tint", Color.Lerp(RenderSettings.skybox.GetColor("_Tint"), redSkyColor, 0.03f));
@@ -88,6 +98,7 @@ public class GameManager : MonoBehaviour
             }
         } else 
         {
+            SetAudioState(1);
             if (RenderSettings.skybox.HasProperty("_Tint"))
             {
                 RenderSettings.skybox.SetColor("_Tint", Color.Lerp(RenderSettings.skybox.GetColor("_Tint"), baseSkyColor, 0.03f));
@@ -98,6 +109,31 @@ public class GameManager : MonoBehaviour
             }
         }
 
+    }
+
+    void SetAudioState(int state)
+    {
+        if (SceneManager.GetActiveScene().name == "Game" || SceneManager.GetActiveScene().name == "TommyTestZone")
+        {
+            switch (state)
+            {
+                case 1:
+                    au1.volume = Mathf.Lerp(au1.volume, 0.4f, 0.03f);
+                    au2.volume = Mathf.Lerp(au2.volume, 0, 0.03f);
+                    au3.volume = Mathf.Lerp(au3.volume, 0, 0.03f);
+                    break;
+                case 2:
+                    au1.volume = Mathf.Lerp(au1.volume, 0, 0.03f);
+                    au2.volume = Mathf.Lerp(au2.volume, 0.4f, 0.03f);
+                    au3.volume = Mathf.Lerp(au3.volume, 0, 0.03f);
+                    break;
+                case 3:
+                    au1.volume = Mathf.Lerp(au1.volume, 0, 0.03f);
+                    au2.volume = Mathf.Lerp(au2.volume, 0, 0.03f);
+                    au3.volume = Mathf.Lerp(au3.volume, 0.4f, 0.03f);
+                    break;
+            }
+        }
     }
 
     public GameObject getInstance() {
