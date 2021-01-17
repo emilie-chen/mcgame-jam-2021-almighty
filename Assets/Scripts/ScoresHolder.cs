@@ -11,6 +11,9 @@ public class ScoresHolder : MonoBehaviour
     public AudioSource audioSourceGoodEnding;
     public AudioSource audioSourceBadEnding;
 
+    public Sprite badEndScreenImage;
+    public Sprite goodEndScreenImage;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,16 +33,16 @@ public class ScoresHolder : MonoBehaviour
         } else if (SceneManager.GetActiveScene().name == "End Screen")
         {
             GameObject.Find("PopulationCircle").GetComponent<Image>().fillAmount = Mathf.Lerp(GameObject.Find("PopulationCircle").GetComponent<Image>().fillAmount, populationPercentage / 100, 0.03f);
-           
-
 
             if (populationPercentage > 20f)
             {
+                GameObject.Find("EndingImage").GetComponent<Image>().sprite = goodEndScreenImage;
                 audioSourceGoodEnding.volume = Mathf.Lerp(audioSourceGoodEnding.volume, 0.6f, 0.03f);
                 audioSourceBadEnding.volume = Mathf.Lerp(audioSourceBadEnding.volume, 0, 0.03f);
 
             }
-            else { 
+            else {
+                GameObject.Find("EndingImage").GetComponent<Image>().sprite = badEndScreenImage;
                 audioSourceBadEnding.volume =  Mathf.Lerp(audioSourceBadEnding.volume, 0, 0.03f);
                 audioSourceGoodEnding.volume = Mathf.Lerp(audioSourceGoodEnding.volume, 0.6f, 0.03f);
             }
