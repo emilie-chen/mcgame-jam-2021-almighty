@@ -9790,7 +9790,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.7336402, b: 0.24056602, a: 1}
-  m_Intensity: 1.6
+  m_Intensity: 0.13
   m_Range: 100.1
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208

@@ -395,7 +395,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -879,7 +879,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -1516,7 +1516,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -2273,7 +2273,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -2587,7 +2587,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -2874,7 +2874,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -3021,7 +3021,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -3308,7 +3308,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -3735,7 +3735,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -3882,7 +3882,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -4165,7 +4165,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -4448,7 +4448,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -5904,7 +5904,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -6695,7 +6695,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -7114,7 +7114,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -7677,7 +7677,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -8096,7 +8096,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -8379,7 +8379,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -8798,7 +8798,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -8945,7 +8945,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -9512,7 +9512,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -10957,7 +10957,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -11819,7 +11819,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -11966,7 +11966,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -12113,7 +12113,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -12426,7 +12426,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -13142,7 +13142,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -13289,7 +13289,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -13607,7 +13607,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -15154,7 +15154,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -15332,7 +15332,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -15615,7 +15615,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -16065,7 +16065,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -17835,7 +17835,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -18080,7 +18080,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -18227,7 +18227,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -18404,7 +18404,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -18823,7 +18823,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -18970,7 +18970,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -19148,7 +19148,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -19431,7 +19431,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -19744,7 +19744,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -19921,7 +19921,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -20068,7 +20068,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -20351,7 +20351,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -20634,7 +20634,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -21010,7 +21010,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -21433,7 +21433,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -21611,7 +21611,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -21898,7 +21898,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -22457,7 +22457,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -23560,7 +23560,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -24535,7 +24535,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -25280,7 +25280,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -25764,7 +25764,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -26354,7 +26354,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -26773,7 +26773,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -27604,7 +27604,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -27983,7 +27983,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -28410,7 +28410,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -28969,7 +28969,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -29963,7 +29963,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -31998,7 +31998,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -32285,7 +32285,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -32568,7 +32568,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -32715,7 +32715,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -33343,7 +33343,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -34174,7 +34174,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -34321,7 +34321,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -35055,7 +35055,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -36193,7 +36193,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -36476,7 +36476,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -36759,7 +36759,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -36981,7 +36981,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -37128,7 +37128,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -37275,7 +37275,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -37453,7 +37453,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -38229,7 +38229,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -38376,7 +38376,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -38659,7 +38659,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -38806,7 +38806,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -39256,7 +39256,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -39403,7 +39403,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -40514,7 +40514,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -40933,7 +40933,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -41111,7 +41111,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -41394,7 +41394,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -41813,7 +41813,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -42403,7 +42403,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -42690,7 +42690,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -42977,7 +42977,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -44143,7 +44143,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -44570,7 +44570,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -44717,7 +44717,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -45066,7 +45066,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -45353,7 +45353,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -45500,7 +45500,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -45783,7 +45783,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -45930,7 +45930,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -46323,7 +46323,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.77
   m_Speed: 28.65
-  m_Acceleration: 0.5
+  m_Acceleration: 2.99
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
