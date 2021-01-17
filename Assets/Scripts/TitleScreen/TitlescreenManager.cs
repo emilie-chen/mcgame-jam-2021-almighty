@@ -26,6 +26,12 @@ public class TitlescreenManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (SceneManager.GetActiveScene().name == "End Screen" ) {
+            if (Input.GetMouseButtonDown(0)) {
+                Invoke(nameof(GoToMenu), 5f);
+            }
+        }
+
         float verticalAxis = Input.GetAxisRaw("Vertical");
 
             if (!popUpOpen)
@@ -47,7 +53,7 @@ public class TitlescreenManager : MonoBehaviour
                     {
                         canButtonDown = false;
                         ExecuteButton(buttonPosition);
-                        soundModule.playSound(0);
+                        soundModule.playSound(1);
                 }
             }
             }
@@ -140,7 +146,7 @@ public class TitlescreenManager : MonoBehaviour
         if (!popUpOpen && canButtonDown) { 
             canButtonDown = false;
             ExecuteButton(buttonPosition);
-            soundModule.playSound(0);
+            soundModule.playSound(1);
         }
     }
 

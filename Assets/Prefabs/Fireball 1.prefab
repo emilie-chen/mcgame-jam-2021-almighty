@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5378022523616765440}
   - component: {fileID: 7122668286210727592}
   - component: {fileID: 3618257712214525216}
+  - component: {fileID: 7246182242781753795}
   m_Layer: 0
   m_Name: Fireball 1
   m_TagString: Untagged
@@ -108,6 +109,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f721acd9bd26644e7a60c7c9eb6bd844, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7246182242781753795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3084069784578098208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 636b6876b5714cb45935b51e68e194a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 10
+  scaleDownFactor: 0
 --- !u!1 &3084069785710230692
 GameObject:
   m_ObjectHideFlags: 0
@@ -4923,6 +4938,7 @@ GameObject:
   - component: {fileID: 3084069786643109131}
   - component: {fileID: 3084069786643109133}
   - component: {fileID: 3084069786643109130}
+  - component: {fileID: 6601756357200590811}
   m_Layer: 0
   m_Name: Fireball
   m_TagString: Untagged
@@ -9716,6 +9732,20 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &6601756357200590811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3084069786643109128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 636b6876b5714cb45935b51e68e194a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 10
+  scaleDownFactor: 0.03
 --- !u!1 &7083086392585226282
 GameObject:
   m_ObjectHideFlags: 0
@@ -9726,6 +9756,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6198175698840426155}
   - component: {fileID: 8319500153866205267}
+  - component: {fileID: 1544879389581675242}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
@@ -9759,8 +9790,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.7336402, b: 0.24056602, a: 1}
-  m_Intensity: 1
-  m_Range: 4
+  m_Intensity: 0.005
+  m_Range: 100.1
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -9809,3 +9840,17 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &1544879389581675242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7083086392585226282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 636b6876b5714cb45935b51e68e194a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 8
+  scaleDownFactor: 0

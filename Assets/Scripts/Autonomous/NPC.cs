@@ -18,6 +18,11 @@ public class NPC : MonoBehaviour
         InvokeRepeating(nameof(ResetState), 1.0f, 20.0f);
     }
 
+    public void DoDamage(int damage)
+    {
+        GetComponent<DamagableEntity>().Health -= damage;
+    }
+
     public void Runaway(Vector3 target)
     {
         GetComponent<NavMeshAgent>().speed = 20.0f;
@@ -42,9 +47,10 @@ public class NPC : MonoBehaviour
 
     private static Vector3 NewTarget()
     {
-        float x = Random.Range(-500.0f, 500.0f);
-        float y = Random.Range(-500.0f, 500.0f);
-        return new Vector3(x, 30.0f, y);
+        float x = Random.Range(-175, 110);
+        float y = Random.Range(-175, 110);
+
+        return new Vector3(x, 0, y);
     }
 
     void Update()
